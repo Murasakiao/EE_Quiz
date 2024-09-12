@@ -1,0 +1,1298 @@
+[
+  {
+    "id": 1,
+    "text": "Which statement about a charge placed on a dielectric material is true?",
+    "options": "The charge is instantly carried to the material\u2019s surface,The charge immediately lost the atmosphere,The charge is confined to the region in which the charge was placed,The charge increases the conductivity of the material",
+    "correct_answer": "The charge is confined to the region in which the charge was placed",
+    "explanation": "In a dielectric material, the charge remains in the area where it was initially placed because dielectrics do not conduct electricity.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electromagnetism"
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Which of the following is NOT a property of magnetic field lines?",
+    "options": "The field is stronger where the lines are closer together,The lines intersect surface of equal intensity at right angles,Magnetic field lines have no beginning and no ends,The lines cross themselves only at right angles",
+    "correct_answer": "The lines cross themselves only at right angles",
+    "explanation": "Magnetic field lines do not cross each other at any angle; if they did, it would imply two different directions of the magnetic field at a point.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electromagnetism"
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Which statement is true?",
+    "options": "Magnetic flux lines have sources only,Magnetic flux lines have sinks only,Magnetic flux lines have both sources and sinks,Magnetic flux lines does not have sources and sinks",
+    "correct_answer": "Magnetic flux lines does not have sources and sinks",
+    "explanation": "Magnetic flux lines form closed loops and do not have sources or sinks, unlike electric field lines which start and end on charges.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electromagnetism"
+    ]
+  },
+  {
+    "id": 4,
+    "text": "In DC motors, what is the definition of \u201cfield resistance\u201d?",
+    "options": "It is the load resistance seen by a generator without considering inductance,It is the resistance of the excitation circuit,It is the resistance of the armature windings plus the load resistance,It is the static resistance of the motor",
+    "correct_answer": "It is the resistance of the excitation circuit",
+    "explanation": "Field resistance in a DC motor refers to the resistance of the circuit that provides the magnetic field, which is essential for the motor\u2019s operation.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electrical Machinery 1", "Electrical Apparatus & Devices, Industrial Electronics"
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Which of the following are generally less for an alternating current than for a direct current?",
+    "options": "Heating effects,Chemical effects,Magnetic effects,Impedance",
+    "correct_answer": "Chemical effects",
+    "explanation": "Alternating current generally produces less chemical effects compared to direct current, which is used in electroplating and other chemical processes.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Electromagnetism", "Electric Circuits 2"
+    ]
+  },
+  {
+    "id": 6,
+    "text": "The ability to convert assets to cash quickly is known as _________.",
+    "options": "Solvency,Liquidity,Leverage,Insolvency",
+    "correct_answer": "Liquidity",
+    "explanation": "Liquidity refers to how quickly an asset can be converted into cash without significant loss of value.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+"topics": [
+      "Engineering Economics"
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Which of the following does not threaten the operation of a computer?",
+    "options": "Trojan Horse,Worm,Firewall,Hacking",
+    "correct_answer": "Firewall",
+    "explanation": "A firewall is a security measure that protects computers from unauthorized access and threats, unlike the other options which represent threats.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+"topics": [
+      "Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory"
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Protection of workers from impact penetration from falling and flying objects, blows, and from limited electric shock and burns shall be provided where there is reasonable probability of exposure of such hazards.",
+    "options": "Hard Hat,Toe Board,Harness,Belt",
+    "correct_answer": "Hard Hat",
+    "explanation": "A hard hat provides essential protection against head injuries from falling objects and impacts in hazardous work environments.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+"topics": [
+      "EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"
+    ]
+  },
+  {
+    "id": 9,
+    "text": "Also known as PRC Renewal Law",
+    "options": "RA 8189,RA 8981,RA 7920,RA 184",
+    "correct_answer": "RA 8981",
+    "explanation": "RA 8981 is the PRC Modernization Act, commonly known as the PRC Renewal Law, which updates the Professional Regulation Commission.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+"topics": [
+      "EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"
+    ]
+  },
+  {
+    "id": 10,
+    "text": "Which of the following are NOT examples of nonvolatile memory in the computer system?",
+    "options": "Flash drives,RAMs,Optical disk,Hard drives",
+    "correct_answer": "RAMs",
+    "explanation": "RAM (Random Access Memory) is volatile, meaning it loses its data when power is turned off, unlike flash drives and hard drives which are nonvolatile.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+"topics": [
+      "Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory"
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Calculate the volume of the solid formed by revolving the area bounded by the parabola y\u00b2 = 12x and the line x = 3 about the line x = 3.",
+    "options": "131,191,181,151",
+    "correct_answer": "181",
+    "explanation": "The volume is calculated using the method of disks or washers, which involves integrating the area of cross-sections perpendicular to the axis of revolution.",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+    "topics": [
+      "Calculus 2"
+    ]
+  },
+  {
+    "id": 12,
+    "text": "A conic section whose eccentricity is less than one (1) is known as:",
+    "options": "A parabola,An ellipse,A circle,A hyperbola",
+    "correct_answer": "An ellipse",
+    "explanation": "In conic sections, an ellipse is defined by an eccentricity less than one, distinguishing it from parabolas, circles, and hyperbolas.",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+"topics": [
+      "Analytic Geometry"
+    ]
+  },
+  {
+    "id": 13,
+    "text": "If Rita can run around the block 5 times in 20 minutes, how many times can she run around the block in an hour?",
+    "options": "10,50,15,100",
+    "correct_answer": "15",
+    "explanation": "If Rita runs 5 times in 20 minutes, she would run 15 times in 60 minutes (1 hour), calculated by scaling up proportionally.",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+"topics": [
+      "Algebra and Complex Numbers"
+    ]
+  },
+  {
+    "id": 14,
+    "text": "Evaluate the double integral of 1/(x-y) dxdy with inner bounds 2y to 3y and outer bound of 0 to 2.",
+    "options": "ln 3,ln 4,ln 2,ln 8",
+    "correct_answer": "ln 4",
+    "explanation": "This integral evaluates to ln(4) after integrating with respect to x and y, using the provided bounds.",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+"topics": [
+      "Calculus 2"
+    ]
+  },
+  {
+    "id": 15,
+    "text": "Find the angle in mils subtended by a line 10 yards long at a distance of 5000 yards.",
+    "options": "2.5 mils,1 mil,4 mils,2.04 mils",
+    "correct_answer": "2.04 mils",
+    "explanation": "The angle in mils is calculated using the formula for angular size, which gives 2.04 mils for a 10-yard line at 5000 yards distance.",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+"topics": [
+      "Trigonometry"
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Also known as PRC Renewal Law",
+    "options": "RA 8189,RA 8981,RA7920,RA 184",
+    "correct_answer": "RA 8981",
+    "explanation": "RA 8981 is the PRC Modernization Act, commonly referred to as the PRC Renewal Law.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"
+    ]
+  },
+  {
+    "id": 17,
+    "text": "Which of the following are NOT examples of nonvolatile memory in the computer system?",
+    "options": "Flash drives,RAMs,Optical disk,Hard drives",
+    "correct_answer": "RAMs",
+    "explanation": "RAM is volatile memory, meaning it loses its data when power is turned off, unlike flash drives and hard drives which retain data without power.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory"
+    ]
+  },
+  {
+    "id": 18,
+    "text": "What is the term for a deadlock situation that occurs when a program references a different page for almost every instruction and there is NOT even enough real memory to hold MOST of the virtual memory?",
+    "options": "Paging,Thrashing,Scanning,Handshaking",
+    "correct_answer": "Thrashing",
+    "explanation": "Thrashing happens when excessive paging leads to a significant decrease in system performance, causing the system to spend most of its time swapping data betwEeen memory and disk.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory"
+    ]
+  },
+  {
+    "id": 19,
+    "text": "Which of the following fluorescent luminaires CANNOT be directly mounted?",
+    "options": "Framing members,Concrete ceiling,Plasters,Plywood ceiling",
+    "correct_answer": "Framing members",
+    "explanation": "Framing members are structural components and should not have fluorescent fixtures directly mounted on them.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Which of the following does NOT affect owner\u00e2\u20ac\u2122s equity?",
+    "options": "Dividends paid,Invested Capital,Expense to get license of start business,License to start business",
+    "correct_answer": "License to start business",
+    "explanation": "The license to start a business is a prerequisite and does not directly affect owner\u00e2\u20ac\u2122s equity.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Engineering Economics"
+    ]
+  },
+  {
+    "id": 21,
+    "text": "What is the present worth of P100 annuity starting on the end of year 3 and continuing to the end of year 4 if the annual interest rate is 8%?",
+    "options": "120,153,122,160",
+    "correct_answer": "153",
+    "explanation": "The present worth is calculated using the formula for the present value of an annuity.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Engineering Economics"
+    ]
+  },
+  {
+    "id": 22,
+    "text": "What metal is used to recover copper from a solution of copper sulphate?",
+    "options": "Na,Ag,Hg,Fe",
+    "correct_answer": "Fe",
+    "explanation": "Iron is used to displace copper from copper sulfate solution.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Chemistry for Engineers", "Material Science, Environmental Science and Engineering"
+    ]
+  },
+  {
+    "id": 23,
+    "text": "BIOS stands for",
+    "options": "Basic Input Output Society,Basic Input Output System,Base Input Output Society,Base Input Output System",
+    "correct_answer": "Basic Input Output System",
+    "explanation": "BIOS stands for Basic Input Output System, essential for booting the computer.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory"
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Rule used to determine the sizing and rating of circuit conductors and devices.",
+    "options": "Manufacturing rule,Construction rule,Wiring design rule,Installation rule",
+    "correct_answer": "Wiring design rule",
+    "explanation": "Wiring design rules ensure the safe and efficient sizing of circuit conductors and devices.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Which of the following is very reactive in its pure form?",
+    "options": "Na,He,HCl,CO2",
+    "correct_answer": "Na",
+    "explanation": "Sodium (Na) is highly reactive and must be stored in oil to prevent it from reacting with moisture in the air.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Chemistry for Engineers", "Material Science, Environmental Science and Engineering"
+    ]
+  },
+  {
+    "id": 26,
+    "text": "What refers to a system in which there is a flow of mass across its boundaries?",
+    "options": "Open system,Closed system,Isolated system,Non-flow system",
+    "correct_answer": "Open system",
+    "explanation": "An open system allows mass to flow in and out across its boundaries.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Basic Thermodynamics"
+    ]
+  },
+  {
+    "id": 27,
+    "text": "What do you call a system in which there is a flow of matter through its boundaries? This system usually encloses the device involving mass flow like a compressor, turbine, or nozzle.",
+    "options": "Closed System,Open System,Isolated System,All of these",
+    "correct_answer": "Open System",
+    "explanation": "An open system allows matter to flow across its boundaries, commonly used in turbines, compressors, etc.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Basic Thermodynamics"
+    ]
+  },
+  {
+    "id": 28,
+    "text": "An open system first law should be utilized on all of the following except",
+    "options": "A compressor,A turbine,Piston-cylinder device with no inlet/exhaust valves,A nozzle",
+    "correct_answer": "Piston-cylinder device with no inlet/exhaust valves",
+    "explanation": "A piston-cylinder device without valves operates as a closed system, where no mass flow occurs.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Basic Thermodynamics"
+    ]
+  },
+  {
+    "id": 29,
+    "text": "A thin homogenous metallic plate containing a hole is heated sufficiently to cause expansion. If the coefficient of surface expansion is linear, the area of the hole will",
+    "options": "Increase at twice the rate as the area of the metal increases,Increases at the same rate as the area of the metal increases,Stay the same,Decrease the same rate as the area of the metal decreases",
+    "correct_answer": "Increases at the same rate as the area of the metal increases",
+    "explanation": "The area of the hole increases at the same rate as the metal expands.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Material Science, Environmental Science and Engineering"
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Combination of laminar and turbulent flow.",
+    "options": "Critical,Continuous,Laminar,Turbulent",
+    "correct_answer": "Critical",
+    "explanation": "Critical flow represents the point between laminar and turbulent flow.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Fluid Mechanics"
+    ]
+  },
+  {
+    "id": 31,
+    "text": "A 40 kg boy walks on a 60 kg log with the speed of 1.5 m/s. What is the speed of the log with respect to the shore?",
+    "options": "1 m/s,0.36 m/s,0.4 m/s,0.6 m/s",
+    "correct_answer": "1 m/s",
+    "explanation": "This is a conservation of momentum problem where the momentum of the boy is equal and opposite to that of the log.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Physics for Engineers", "Fundamental of Deformable Bodies"
+    ]
+  },
+  {
+    "id": 32,
+    "text": "A byte is composed of how many bits?",
+    "options": "2,4,6,8",
+    "correct_answer": "8",
+    "explanation": "A byte is made up of 8 bits.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory"
+    ]
+  },
+  {
+    "id": 33,
+    "text": "An object that has momentum must also have",
+    "options": "Acceleration,Impulse,Kinetic energy,Potential energy",
+    "correct_answer": "Kinetic energy",
+    "explanation": "Momentum is directly related to kinetic energy.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Fundamental of Deformable Bodies"
+    ]
+  },
+  {
+    "id": 34,
+    "text": "In how many years will an investment double in value at 5% simple interest?",
+    "options": "10,14,20,15",
+    "correct_answer": "20",
+    "explanation": "Using the simple interest formula, it will take 20 years for the investment to double.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Engineering Economics"
+    ]
+  },
+  {
+    "id": 35,
+    "text": "A laboratory room keeps a differential vacuum of 0.1 kPa. How much force is acting on a 1m x 2m door?",
+    "options": "400 N,200 N,300 N,150 N",
+    "correct_answer": "200 N",
+    "explanation": "The force is calculated using the pressure difference and the area of the door.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Fluid Mechanics", "Physics for Engineers"
+    ]
+  },
+  {
+    "id": 36,
+    "text": "The mathematical expression (1 + i)^n refers to?",
+    "options": "Compound amount factor,Present worth factor,Capital recovery,Uniform gradient future worth",
+    "correct_answer": "Compound amount factor",
+    "explanation": "This is the compound amount factor formula, used to calculate future value.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Electromagnetism"
+    ]
+  },
+  {
+    "id": 37,
+    "text": "What is the geometric property of a trapezoid\u00e2\u20ac\u2122s height if its bases are parallel?",
+    "options": "Perpendicular to the bases,Parallel to the bases,Bisect the bases,Intersect the bases",
+    "correct_answer": "Perpendicular to the bases",
+    "explanation": "The height of a trapezoid is the perpendicular distance between the parallel bases.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+"topics": [
+      "Fundamental of Deformable Bodies"
+    ]
+  },
+  {
+    "id": 38,
+    "text": "Copper loss of a transformer is determined by means of a/an ________ test.",
+    "options": "Open-circuit,Polarity,Short-circuit,Inductive-circuit",
+    "correct_answer": "Short-circuit",
+    "explanation": "Copper loss is determined by the Short-circuit test, where the transformer is tested under short-circuit conditions to measure the copper losses.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electrical Apparatus & Devices, Industrial Electronics", "Electrical Machinery 2"
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Single-Side Band signal produces a peak to peak voltage of 720 V on voice peaks across a 75-ohm antenna. What is the peak envelope power?",
+    "options": "865 W,856 W,835 W,853 W",
+    "correct_answer": "865 W",
+    "explanation": "The peak envelope power (P) can be calculated using the formula P = (V^2) / (2 * R). Here, V = 720 V and R = 75 \u00ce\u00a9, which gives P = 865 W.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Fundamentals of Electronic Communications, Electronics 1 and 2"
+    ]
+  },
+  {
+    "id": 40,
+    "text": "What is/are the main reason/s for using high voltage in transmission of power in the grid system? in the grid system? \\nI. To transmit bulk power with minimum line losses \\nII. Increase system reliability",
+    "options": "II only,Both I and II,Either I or II,I only",
+    "correct_answer": "I only",
+    "explanation": "The main reason for using high voltage in power transmission is to transmit bulk power with minimum line losses (I). Increasing system reliability (II) is a secondary benefit.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Power System Analysis"
+    ]
+  },
+  {
+    "id": 41,
+    "text": "In an inductive circuit, capacitors are connected in _______ to improve the power factor.",
+    "options": "Parallel,Series,Series-parallel,Parallel-series",
+    "correct_answer": "Parallel",
+    "explanation": "Capacitors are connected in parallel with inductive loads to counteract the inductive reactance and improve the power factor.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Power System Analysis", "Fundamental of Power Plants Engineering Designs and Distribution Systems and Substation Design"
+    ]
+  },
+  {
+    "id": 42,
+    "text": "In which type of electronic communication does the information travel in two directions?",
+    "options": "Half duplex,Full duplex,Multiplex,Bicomm",
+    "correct_answer": "Full duplex",
+    "explanation": "Full duplex communication allows information to travel in both directions simultaneously, unlike half duplex which allows communication in only one direction at a time.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Fundamentals of Electronic Communications, Electronics 1 and 2"
+    ]
+  },
+  {
+    "id": 43,
+    "text": "ThrElectrical Engineering 6.66 \u00ce\u00a9 resistors are connected wye. What is the equivalent of each delta connected resistors?",
+    "options": "2.22 \u00ce\u00a9,20 \u00ce\u00a9,11.54 \u00ce\u00a9,10 \u00ce\u00a9",
+    "correct_answer": "20 \u00ce\u00a9",
+    "explanation": "For a wye to delta transformation, the equivalent delta resistance is given by R_delta = (R_wye * R_wye) / R_wye. For thrElectrical Engineering 6.66 \u00ce\u00a9 resistors, the equivalent delta resistance is 20 \u00ce\u00a9.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electric Circuits 1"
+    ]
+  },
+  {
+    "id": 44,
+    "text": "A 75-watt lamp is used to illuminate a desk that is 10 ft away. What is the wattage of the lamp if it must operate 12 ft away from the desk to have the same illumination?",
+    "options": "108,112,140,241",
+    "correct_answer": "108",
+    "explanation": "Illumination is inversely proportional to the square of the distance. Using the inverse square law, the wattage required for a 12 ft distance is calculated to be 108 W.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electrical Systems & Illumination Engineering Design"
+    ]
+  },
+  {
+    "id": 45,
+    "text": "A device used to measure the impurities in the insulating oil.",
+    "options": "Oil tester,Acid tester,Frequency meter,Ammeter",
+    "correct_answer": "Oil tester",
+    "explanation": "An oil tester is used to measure the impurities and degradation in insulating oil.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Electrical Apparatus & Devices, Industrial Electronics"
+    ]
+  },
+  {
+    "id": 46,
+    "text": "Which of the following insulators will be selected for high voltage applications?",
+    "options": "Strain type,Disc type,Suspension type,Pin type",
+    "correct_answer": "Suspension type",
+    "explanation": "Suspension type insulators are preferred for high voltage applications due to their ability to withstand high voltages and provide reliable insulation.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Power System Analysis"
+    ]
+  },
+  {
+    "id": 47,
+    "text": "The current flowing in L and C at parallel resonance are",
+    "options": "Zero,Equal,Infinite,Different",
+    "correct_answer": "Equal",
+    "explanation": "At parallel resonance, the inductive reactance (L) and capacitive reactance (C) are equal, resulting in equal currents through L and C.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Power System Analysis", "Electric Circuits 2"
+    ]
+  },
+  {
+    "id": 48,
+    "text": "For an unbalanced load, which connection is suitable?",
+    "options": "3-wire open delta,4-wire wye connection,3-wire delta connection,3-wire wye connection",
+    "correct_answer": "4-wire wye connection",
+    "explanation": "A 4-wire wye connection is suitable for handling unbalanced loads as it provides a neutral point for balancing the load.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electric Circuits 2", "Power System Analysis"
+    ]
+  },
+  {
+    "id": 49,
+    "text": "Overhead transmission lines are protected from lightning with the use of",
+    "options": "Overhead grounding conductor,Surge arresters,Either I or II,Neither I nor II",
+    "correct_answer": "Either I or II",
+    "explanation": "Overhead transmission lines can be protected from lightning using either overhead grounding conductors or surge arresters.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Power System Analysis"
+    ]
+  },
+  {
+    "id": 50,
+    "text": "The dc armature winding in which the coil sides are placed a pole pitch apart is called ________ winding.",
+    "options": "Multiplex,Full-pitch,Fractional Pitch,Pole-pitch",
+    "correct_answer": "Full-pitch",
+    "explanation": "A full-pitch winding has its coil sides placed a pole pitch apart, providing better performance and efficiency in DC machines.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electrical Machinery 1"
+    ]
+  },
+  {
+    "id": 51,
+    "text": "What is the equivalent of 1 + a + a^2?",
+    "options": "0,1,1 + j,-1",
+    "correct_answer": "0",
+    "explanation": "The expression 1 + a + a^2 equals zero if 'a' is a cube root of unity (i.e., a^3 = 1 and a \u00e2\u2030\u00a0 1).",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Power System Analysis"
+    ]
+  },
+  {
+    "id": 52,
+    "text": "The specific resistance of a conductor depends on",
+    "options": "The dimensions of the conductor,The nature of the material of the conductor only,The resistance of the conductor,The area of the conductor",
+    "correct_answer": "The nature of the material of the conductor only",
+    "explanation": "The specific resistance (or resistivity) of a conductor is a material property and is independent of its dimensions or area.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Electric Circuits 1"
+    ]
+  },
+  {
+    "id": 53,
+    "text": "The load factor is",
+    "options": "Average Load/Installed Capacity,Maximum Load/Average Load,Average Load/Maximum Load,Connected Load/Maximum Load",
+    "correct_answer": "Average Load/Maximum Load",
+    "explanation": "The load factor is calculated as the ratio of average load to maximum load, indicating the efficiency of load utilization.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Fundamental of Power Plants Engineering Designs and Distribution Systems and Substation Design"
+    ]
+  },
+  {
+    "id": 54,
+    "text": "In the transformers,",
+    "options": "High tension winding is used near the core,High tension winding is used away from the core,Low tension winding is used near the core,Low tension winding is used away from the core",
+    "correct_answer": "High tension winding is used near the core",
+    "explanation": "In transformers, high tension (high voltage) windings are placed away from the core to reduce insulation requirements and improve performance.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Electrical Apparatus & Devices, Industrial Electronics", "Electrical Machinery 2"
+    ]
+  },
+  {
+    "id": 55,
+    "text": "The effect of series capacitor on a transmission line is to improve",
+    "options": "Steady state stability,Transient stability,Both A and B,None of these",
+    "correct_answer": "Steady state stability",
+    "explanation": "Series capacitors in transmission lines improve steady-state stability by increasing the transmission capacity and reducing the reactance of the line.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Power System Analysis"
+    ]
+  },
+  {
+    "id": 56,
+    "text": "In two-wattmeter method, the reading of one of the wattmeters will be zero when",
+    "options": "Load in one of the phase is zero,Power factor is unity,Power factor is 0.5,Neutral is earthed",
+    "correct_answer": "Power factor is 0.5",
+    "explanation": "In a two-wattmeter method, if the power factor is 0.5 (cos \u00cf\u2020 = 0.5), one of the wattmeters will read zero due to the balanced condition of the power factor.",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+"topics": [
+      "Power System Analysis", "Electrical Apparatus & Devices, Industrial Electronics", "Fundamental of Power Plants Engineering Designs and Distribution Systems and Substation Design"
+    ]
+  },
+  {
+    "id": 57,
+    "text": "The main purpose of the transformer in electrical systems is to",
+    "options": "Change voltage levels,Isolate different circuits,Increase power factor,Decrease losses",
+    "correct_answer": "Change voltage levels",
+    "explanation": "Transformers are primarily used to change voltage levels in electrical systems, allowing efficient transmission and distribution of electrical power.",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+"topics": [
+      "Electrical Apparatus & Devices, Industrial Electronics", "Power System Analysis"
+    ]
+  },
+  {
+    "id": 58,
+    "text": "What is the value of i^4 where i is the imaginary unit?",
+    "options": "1,i,-1,-i",
+    "correct_answer": "1",
+    "explanation": "i^4 = (i^2)^2 = (-1)^2 = 1",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+    "topics": [
+      "Algebra and Complex Numbers"
+    ]
+  },
+  {
+    "id": 59,
+    "text": "What is the derivative of sin(x) with respect to x?",
+    "options": "cos(x),-cos(x),sin(x),-sin(x)",
+    "correct_answer": "cos(x)",
+    "explanation": "The derivative of sin(x) is cos(x)",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+    "topics": [
+      "Calculus 1"
+    ]
+  },
+  {
+    "id": 60,
+    "text": "What is the solution to the differential equation dy/dx = 2x?",
+    "options": "y = x^2 + C,y = 2x + C,y = x^2,y = 2x",
+    "correct_answer": "y = x^2 + C",
+    "explanation": "Integrating both sides: y = ∫2x dx = x^2 + C",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+    "topics": [
+      "Differential Equations"
+    ]
+  },
+  {
+    "id": 61,
+    "text": "What is the pH of a 0.01 M HCl solution?",
+    "options": "1,2,3,4",
+    "correct_answer": "2",
+    "explanation": "pH = -log[H+] = -log(0.01) = 2",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": [
+      "Chemistry for Engineers"
+    ]
+  },
+  {
+    "id": 62,
+    "text": "What is the primary purpose of a microprocessor?",
+    "options": "Data storage,Data processing,Data transmission,Data visualization",
+    "correct_answer": "Data processing",
+    "explanation": "A microprocessor's main function is to process data according to instructions",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": [
+      "Computer Programming, Microprocessor Systems and Logic Circuits and Switching Theory"
+    ]
+  },
+  {
+    "id": 63,
+    "text": "What is the formula for the present value of an annuity?",
+    "options": "PV = PMT * (1 - (1+r)^-n) / r,PV = PMT * (1 + r)^n,PV = PMT / (1+r)^n,PV = PMT * n / (1+r)",
+    "correct_answer": "PV = PMT * (1 - (1+r)^-n) / r",
+    "explanation": "This formula calculates the present value of a series of equal payments",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": [
+      "Engineering Economics"
+    ]
+  },
+  {
+    "id": 64,
+    "text": "What is Faraday's law of electromagnetic induction?",
+    "options": "E = -N(dΦ/dt),E = IR,E = V/I,E = mc^2",
+    "correct_answer": "E = -N(dΦ/dt)",
+    "explanation": "Faraday's law states that the induced EMF is proportional to the rate of change of magnetic flux",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+    "topics": [
+      "Electromagnetism"
+    ]
+  },
+  {
+    "id": 65,
+    "text": "In a series RLC circuit, what happens at resonance?",
+    "options": "XL = XC,XL > XC,XL < XC,XL + XC = 0",
+    "correct_answer": "XL = XC",
+    "explanation": "At resonance, the inductive reactance equals the capacitive reactance",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+    "topics": [
+      "Electric Circuits 2"
+    ]
+  },
+  {
+    "id": 66,
+    "text": "What is the purpose of a voltage regulator in a power supply?",
+    "options": "To maintain a constant voltage output,To increase the input voltage,To decrease the input voltage,To convert AC to DC",
+    "correct_answer": "To maintain a constant voltage output",
+    "explanation": "A voltage regulator ensures a stable output voltage despite variations in input voltage or load current",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+    "topics": [
+      "Electrical Apparatus & Devices, Industrial Electronics"
+    ]
+  },
+  {
+    "id": 67,
+    "text": "What is the primary function of a transformer?",
+    "options": "To change voltage levels,To generate electricity,To store energy,To convert AC to DC",
+    "correct_answer": "To change voltage levels",
+    "explanation": "Transformers are used to step up or step down voltage levels in AC systems",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+    "topics": [
+      "Electrical Machinery 1"
+    ]
+  },
+  {
+  "id": 68,
+    "text": "What is the value of sin(30°)?",
+    "options": "1/2,√3/2,√2/2,1/√2",
+    "correct_answer": "1/2",
+    "explanation": "sin(30°) = 1/2 is a standard trigonometric value",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+    "topics": ["Trigonometry"
+  ]
+  },
+  {
+    "id": 69,
+    "text": "What is the equation of a circle with center (2, 3) and radius 4?",
+    "options": "(x-2)^2 + (y-3)^2 = 16,(x+2)^2 + (y+3)^2 = 16,(x-2)^2 + (y-3)^2 = 4,(x+2)^2 + (y+3)^2 = 4",
+    "correct_answer": "(x-2)^2 + (y-3)^2 = 16",
+    "explanation": "The general equation is (x-h)^2 + (y-k)^2 = r^2, where (h,k) is the center and r is the radius",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+    "topics": ["Analytic Geometry"
+  ]
+  },
+  {
+    "id": 70,
+    "text": "What is the probability of rolling a sum of 7 with two fair six-sided dice?",
+    "options": "1/6,5/36,1/12,1/8",
+    "correct_answer": "1/6",
+    "explanation": "There are 6 ways to roll a 7 out of 36 possible outcomes: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1)",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+    "topics": ["Probability & Statistics"
+  ]
+  },
+  {
+    "id": 71,
+    "text": "What is the integral of e^x dx?",
+    "options": "e^x + C,ln(x) + C,xe^x + C,e^x/x + C",
+    "correct_answer": "e^x + C",
+    "explanation": "The integral of e^x is itself plus a constant of integration",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+    "topics": ["Calculus 2"
+  ]
+  },
+  {
+    "id": 72,
+    "text": "What is the mean of the dataset: 2, 4, 6, 8, 10?",
+    "options": "5,6,7,8",
+    "correct_answer": "6",
+    "explanation": "The mean is calculated by summing all values and dividing by the number of values: (2+4+6+8+10)/5 = 30/5 = 6",
+    "subject": "Engineering Mathematics",
+    "difficulty": "easy",
+    "topics": ["Engineering Data Analysis"
+  ]
+  },
+  {
+    "id": 73,
+    "text": "What is the general solution to the differential equation d^2y/dx^2 + y = 0?",
+    "options": "y = A sin(x) + B cos(x),y = Ae^x + Be^-x,y = Ax + B,y = A ln(x) + B",
+    "correct_answer": "y = A sin(x) + B cos(x)",
+    "explanation": "This is the general solution to the simple harmonic oscillator equation",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+    "topics": ["Differential Equations"
+  ]
+  },
+  {
+    "id": 74,
+    "text": "Which numerical method uses the formula: x_(n+1) = x_n - f(x_n)/f'(x_n)?",
+    "options": "Newton-Raphson method,Bisection method,Secant method,Fixed-point iteration",
+    "correct_answer": "Newton-Raphson method",
+    "explanation": "This formula describes the Newton-Raphson method for finding roots of equations",
+    "subject": "Engineering Mathematics",
+    "difficulty": "medium",
+    "topics": ["Numerical Methods & Analysis"
+  ]
+  },
+  {
+    "id": 75,
+    "text": "What is the primary purpose of a microprocessor?",
+    "options": "Data storage,Data processing,Data transmission,Data visualization",
+    "correct_answer": "Data processing",
+    "explanation": "A microprocessor's main function is to process data according to instructions",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["Computer Programming, Microprocessor Systems and Logic Circuits and Switching Theory"
+  ]
+  },
+  {
+    "id": 76,
+    "text": "What is the formula for the present value of an annuity?",
+    "options": "PV = PMT * (1 - (1+r)^-n) / r,PV = PMT * (1 + r)^n,PV = PMT / (1+r)^n,PV = PMT * n / (1+r)",
+    "correct_answer": "PV = PMT * (1 - (1+r)^-n) / r",
+    "explanation": "This formula calculates the present value of a series of equal payments",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["Engineering Economics"
+  ]
+  },
+  {
+    "id": 77,
+    "text": "What is the SI unit of force?",
+    "options": "Newton,Joule,Watt,Pascal",
+    "correct_answer": "Newton",
+    "explanation": "The Newton (N) is the SI unit of force, defined as the force needed to accelerate 1 kg at 1 m/s^2",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["Physics for Engineers"
+  ]
+  },
+  {
+    "id": 78,
+    "text": "What is the basic principle of a NOT gate in logic circuits?",
+    "options": "It inverts the input,It multiplies the input by 2,It adds two inputs,It performs no operation",
+    "correct_answer": "It inverts the input",
+    "explanation": "A NOT gate (inverter) changes a 1 to a 0 and a 0 to a 1",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["Computer Programming, Microprocessor Systems and Logic Circuits and Switching Theory"
+  ]
+  },
+  {
+    "id": 79,
+    "text": "What is the primary component of stainless steel that gives it corrosion resistance?",
+    "options": "Chromium,Nickel,Carbon,Iron",
+    "correct_answer": "Chromium",
+    "explanation": "Chromium forms a passive layer of chromium oxide on the surface, protecting the steel from corrosion",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["Material Science, Environmental Science and Engineering"
+  ]
+  },
+  {
+    "id": 80,
+    "text": "What is the equation for continuity in fluid mechanics?",
+    "options": "A1v1 = A2v2,P1 + ρgh1 + 1/2ρv1^2 = P2 + ρgh2 + 1/2ρv2^2,F = ma,E = mc^2",
+    "correct_answer": "A1v1 = A2v2",
+    "explanation": "This equation represents the conservation of mass in fluid flow",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["Fluid Mechanics"
+  ]
+  },
+  {
+    "id": 81,
+    "text": "What is Young's modulus a measure of?",
+    "options": "Stiffness,Ductility,Hardness,Toughness",
+    "correct_answer": "Stiffness",
+    "explanation": "Young's modulus is a measure of a material's stiffness or resistance to elastic deformation",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["Fundamental of Deformable Bodies"
+  ]
+  },
+  {
+    "id": 82,
+    "text": "What is the first law of thermodynamics?",
+    "options": "Conservation of energy,Entropy always increases,Heat flows from hot to cold,Work done is path independent",
+    "correct_answer": "Conservation of energy",
+    "explanation": "The first law of thermodynamics states that energy cannot be created or destroyed, only converted from one form to another",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["Basic Thermodynamics"
+  ]
+  },
+  {
+    "id": 83,
+    "text": "What does BOSH stand for in the context of engineering?",
+    "options": "Basic Occupational Safety and Health,Building Operations and System Handling,Business Operations and Strategic Handling,None of the above",
+    "correct_answer": "Basic Occupational Safety and Health",
+    "explanation": "BOSH stands for Basic Occupational Safety and Health, which covers fundamental safety practices in the workplace",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"
+  ]
+  },
+  {
+    "id": 84,
+    "text": "What is the primary goal of technopreneurship?",
+    "options": "To create innovative technology-based businesses,To increase government funding for technology,To reduce technology use in business,To outsource technological development",
+    "correct_answer": "To create innovative technology-based businesses",
+    "explanation": "Technopreneurship combines technology innovation with entrepreneurship to create new business opportunities",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["Technopreneurship 101 and Management of Engineering Projects"]
+  },
+  {
+    "id": 85,
+    "text": "What is Faraday's law of electromagnetic induction?",
+    "options": "E = -N(dΦ/dt),E = IR,E = V/I,E = mc^2",
+    "correct_answer": "E = -N(dΦ/dt)",
+    "explanation": "Faraday's law states that the induced EMF is proportional to the rate of change of magnetic flux",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+    "topics": ["Electromagnetism"
+  ]
+  },
+  {
+    "id": 86,
+    "text": "In a series RLC circuit, what happens at resonance?",
+    "options": "XL = XC,XL > XC,XL < XC,XL + XC = 0",
+    "correct_answer": "XL = XC",
+    "explanation": "At resonance, the inductive reactance equals the capacitive reactance",
+    "subject": "Electrical Engineering",
+    "difficulty": "medium",
+    "topics": ["Electric Circuits 2"
+  ]
+  },
+  {
+    "id": 87,
+    "text": "What is the purpose of a voltage regulator in a power supply?",
+    "options": "To maintain a constant voltage output,To increase the input voltage,To decrease the input voltage,To convert AC to DC",
+    "correct_answer": "To maintain a constant voltage output",
+    "explanation": "A voltage regulator ensures a stable output voltage despite variations in input voltage or load current",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+    "topics": ["Electrical Apparatus & Devices, Industrial Electronics"
+  ]
+  },
+  {
+    "id": 88,
+    "text": "What is the primary function of a transformer?",
+    "options": "To change voltage levels,To generate electricity,To store energy,To convert AC to DC",
+    "correct_answer": "To change voltage levels",
+    "explanation": "Transformers are used to step up or step down voltage levels in AC systems",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+    "topics": ["Electrical Machinery 1"
+  ]
+  },
+  {
+    "id": 89,
+    "text": "What is Kirchhoff's Current Law?",
+    "options": "The sum of currents entering a node equals the sum of currents leaving the node,The sum of voltages around a closed loop is zero,Current is directly proportional to voltage,The sum of resistances in a circuit is constant",
+    "correct_answer": "The sum of currents entering a node equals the sum of currents leaving the node",
+    "explanation": "Kirchhoff's Current Law is based on the conservation of charge in electrical circuits",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+    "topics": ["Electric Circuits 1"
+  ]
+  },
+  {
+    "id": 90,
+    "text": "What is the function of a diode in an electronic circuit?",
+    "options": "To allow current flow in one direction,To amplify signals,To store electrical charge,To generate AC voltage",
+    "correct_answer": "To allow current flow in one direction",
+    "explanation": "A diode acts as a one-way valve for electric current, allowing flow in only one direction",
+    "subject": "Electrical Engineering",
+    "difficulty": "easy",
+    "topics": ["Fundamentals of Electronic Communications, Electronics 1 and 2"
+  ]
+  },
+  {
+    "id": 91,
+    "text": "Recyclable wastes should be placed in _____ waste containers/bins.",
+    "options": "Black,Green,Blue,Red",
+    "correct_answer": "Blue",
+    "explanation": "Recyclable wastes are typically placed in blue containers/bins for proper segregation and recycling.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 92,
+    "text": "_____ is an example of biodegradable waste.",
+    "options": "Glass bottles and jars,Cigarette butts,Fallen leaves and twigs,Paint cans",
+    "correct_answer": "Fallen leaves and twigs",
+    "explanation": "Biodegradable waste includes organic materials that decompose naturally, like fallen leaves and twigs.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 93,
+    "text": "It is described as a flow of energy where electrons flow.",
+    "options": "electricity,circuitry,matter,power",
+    "correct_answer": "electricity",
+    "explanation": "Electricity refers to the flow of electrons, which is a form of energy transfer.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 94,
+    "text": "In the Hierarchy of Controls, which is the least effective and which is the most effective?",
+    "options": "Administrative Controls; Elimination, PPE; Elimination, PPE; Substitution, Elimination; PPE",
+    "correct_answer": "PPE; Elimination",
+    "explanation": "In the Hierarchy of Controls, PPE (Personal Protective Equipment) is considered the least effective, while Elimination is the most effective control measure.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 95,
+    "text": "Which of the following is not part of the preparedness cycle?",
+    "options": "Train,Evacuate,Revise Plans,Evaluate and Assess",
+    "correct_answer": "Evacuate",
+    "explanation": "The preparedness cycle includes activities such as training, revising plans, and evaluating and assessing, but evacuation is part of the response phase.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 96,
+    "text": "This refers to the practice of implementing the emergency plan to test if the plan is complete enough, to give the workers an idea on how to react in an organized or methodical way during an emergency.",
+    "options": "Drill,Evacuation,Exercise,Isolation",
+    "correct_answer": "Drill",
+    "explanation": "A drill is a practice exercise to test and improve the effectiveness of emergency plans and responses.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 97,
+    "text": "This is the Republic Act that established the Board of Electrical Engineering.",
+    "options": "Republic Act No. 9003,Republic Act No. 8749, Republic Act No. 7920,Republic Act No. 9514",
+    "correct_answer": "Republic Act No. 7920",
+    "explanation": "Republic Act No. 7920 established the Board of Electrical Engineering in the Philippines.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 98,
+    "text": "This Act has the full title of “A comprehensive air quality management policy and program that aims to achieve and maintain healthy air for all Filipinos”.",
+    "options": "The New Electrical Engineering Law,Ecological Solid Waste Management Act of 2000,Toxic Substances; Hazardous; and Nuclear Waste Control Act of 1990,The Philippine Clean Air Act",
+    "correct_answer": "The Philippine Clean Air Act",
+    "explanation": "The Philippine Clean Air Act aims to achieve and maintain healthy air quality standards in the Philippines.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 99,
+    "text": "The 3Rs of Waste Management stand for",
+    "options": "Reapply-Rinse-Repeat,Recover-Release-Rectify,Record-Report-Redo,Reduce-Reuse-Recycle",
+    "correct_answer": "Reduce-Reuse-Recycle",
+    "explanation": "The 3Rs of Waste Management are Reduce, Reuse, and Recycle, which are key principles for effective waste management.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 100,
+    "text": "These are used to measure and assess the progress and current state of occupational health and safety in the workplace.",
+    "options": "Safety Manual,PEC,OHS Personal Records,Occupational Health Indicators",
+    "correct_answer": "Occupational Health Indicators",
+    "explanation": "Occupational Health Indicators are used to assess and track the status of health and safety in the workplace.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 101,
+    "text": "Which of the following is not an example of an electrical equipment?",
+    "options": "motor control center,distribution load center,electric machinery,none of the above",
+    "correct_answer": "none of the above",
+    "explanation": "All listed options are examples of electrical equipment.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 102,
+    "text": "How long should you rub your hands vigorously together with soap when washing your hands?",
+    "options": "2-3 seconds,15-20 seconds,5-8 seconds,5-10 seconds",
+    "correct_answer": "15-20 seconds",
+    "explanation": "It is recommended to rub your hands with soap for at least 15-20 seconds to ensure effective hand hygiene.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 103,
+    "text": "ANSI stands for",
+    "options": "Asian Nations Standards Institute,All Nations Standards Institute,Australian National Standards Institute,American National Standards Institute",
+    "correct_answer": "American National Standards Institute",
+    "explanation": "ANSI stands for American National Standards Institute, which oversees the development of voluntary consensus standards for various industries.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 104,
+    "text": "PPE stands for",
+    "options": "Proper Protection Equipment,Primary Protection Equipment,Personal Protective Equipment,Physical Protective Equipment",
+    "correct_answer": "Personal Protective Equipment",
+    "explanation": "PPE stands for Personal Protective Equipment, which includes gear designed to protect workers from workplace hazards.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "easy",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 106,
+    "text": "This is the repetition of the 5S application to make it a habit.",
+    "options": "Shine,Systemize,Sort,Sustain",
+    "correct_answer": "Sustain",
+    "explanation": "Sustain refers to maintaining the practices of the 5S methodology to ensure they become habitual.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 107,
+    "text": "Which of the following is a common type of electrical hazards?",
+    "options": "All of the above,Insufficient wiring,Wet conditions,Contact with live wires causing electric shock and burns",
+    "correct_answer": "All of the above",
+    "explanation": "All listed options are common electrical hazards, including insufficient wiring, wet conditions, and contact with live wires.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 108,
+    "text": "Which government body established the Philippine Occupational Safety and Health Standards?",
+    "options": "DOH,DOLE,TESDA,DSWD",
+    "correct_answer": "DOLE",
+    "explanation": "The Department of Labor and Employment (DOLE) established the Philippine Occupational Safety and Health Standards.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 109,
+    "text": "This PPE is used to enhance the visibility of the workers, thus avoiding any risk of injury.",
+    "options": "Safety Glasses,Hard Hat,Reflectorized Vest,Protective Gloves",
+    "correct_answer": "Reflectorized Vest",
+    "explanation": "A reflectorized vest is designed to enhance visibility and reduce the risk of accidents by making workers more noticeable.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 110,
+    "text": "This Act ensures public safety, promotes economic development through the prevention and suppression of all kinds of destructive fires, and promotes the professionalization of the fire service.",
+    "options": "Philippine Occupational Safety and Health Standards,Fire Code of the Philippines of 2008,Philippine Electrical Code,National Building Code of the Philippines",
+    "correct_answer": "Fire Code of the Philippines of 2008",
+    "explanation": "The Fire Code of the Philippines of 2008 aims to ensure public safety and professionalize the fire service by preventing and managing fires.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 111,
+    "text": "This means regularly ensuring that the workplace and all items are free from dust and junk to keep them functioning well.",
+    "options": "Systemize,Sustain,Sort,Shine",
+    "correct_answer": "Shine",
+    "explanation": "Shine refers to keeping the workplace clean and organized by removing dust and debris.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 112,
+    "text": "Which of the following is not included in the scope of the Philippine Electrical Code (PEC)?",
+    "options": "Installations in railway rolling stock; aircraft; or automotive vehicles,Installations in transformer stations,Installations in electric generating plants,Installations in public and private buildings",
+    "correct_answer": "Installations in railway rolling stock; aircraft; or automotive vehicles",
+    "explanation": "The Philippine Electrical Code (PEC) does not cover installations in railway rolling stock, aircraft, or automotive vehicles.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 113,
+    "text": "Which of the following is a reason why electrical maintenance is important?",
+    "options": "Makes electrical equipment last longer,Saves money spent on electricity,All of the above,Prevents accidents from happening",
+    "correct_answer": "All of the above",
+    "explanation": "Electrical maintenance is important because it extends equipment life, reduces electricity costs, and prevents accidents.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 114,
+    "text": "Which of the following has the correct differentiation between hazards and risks?",
+    "options": "A risk is something that can cause harm; while a hazard is the likelihood of the risk to cause harm.,A hazard is something that can cause harm; while a risk is the likelihood of the hazard to cause harm.,None of the above.,Hazards and risks are totally unrelated.",
+    "correct_answer": "A hazard is something that can cause harm; while a risk is the likelihood of the hazard to cause harm.",
+    "explanation": "A hazard is a potential source of harm, while a risk is the probability that the hazard will cause harm.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+    "id": 115,
+    "text": "What should be done to prevent the risk of electrical hazards?",
+    "options": "Immediately perform electrical repairs without doing the Lock-Out Tag-Out procedure.,Store electrical materials and equipment within 10 feet from overhead power lines.,Use sharp objects to hang wires and extension cords on the ceilings or walls.,Inspect electrical cords and plugs for damaged insulation and broken ground pins before use.",
+    "correct_answer": "Inspect electrical cords and plugs for damaged insulation and broken ground pins before use.",
+    "explanation": "Inspecting electrical cords and plugs ensures that any damage is identified and addressed to prevent hazards.",
+    "subject": "Engineering Science and Allied Subjects",
+    "difficulty": "medium",
+    "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+}
+]

@@ -1,0 +1,41 @@
+Table of Specification of Electrical Engineering Board Examination
+
+Subject: Engineering Mathematics
+Topics:
+A. Algebra and Complex Numbers
+B. Trigonometry
+C. Analytic Geometry
+D. Probability & Statistics
+E. Calculus 1
+F. Calculus 2
+G. Engineering Data Analysis
+H. Differential Equations
+I. Numerical Methods & Analysis
+
+Subject: Engineering Science and Allied Subjects
+Topics:
+A. Chemistry for Engineers
+B. Physics for Engineers
+C. Computer Programming, Microprocessor Systems and Logic Ciruits and Switching Theory
+D. Material Science, Environmental Science and Engineering
+E. Fluid Mechanics
+F. Fundamental of Deformable Bodies
+G. Basic Thermodynamics
+H. EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices
+I. Engineering Economics
+J. Technopreneurship 101 and Management of Engineering Projects
+
+Subject: Electrical Engineering
+Topics:
+A. Electromagnetism 
+B. Electric Circuits 1 
+C. Electric Circuits 2
+D. Fundamentals of Electronic Communications, Electronics 1 and 2
+E. Electrical Apparatus & Devices, Industrial Electronics
+F. Electrical Machinery 1
+G. Electrical Machinery 2
+H. Instrumentation & Control, Feedback Control System and Research Methods
+I. Electrical Systems & Illumination Engineering Design
+J. Fundamental of Power Plants Engineering Designs and Distribution Systems and Substation Design
+K. Power System Analysis 
+

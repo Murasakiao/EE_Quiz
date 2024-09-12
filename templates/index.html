@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Engineering Board Exam Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#subject').change(function() {
+                var subject = $(this).val();
+                $.getJSON('/index', {subject: subject}, function(data) {
+                    var topicsDiv = $('#topics');
+                    topicsDiv.empty();
+                    $.each(data, function(index, value) {
+                        topicsDiv.append(
+                            $('<div>').addClass('topic-item').append(
+                                $('<input>').attr({
+                                    type: 'checkbox',
+                                    name: 'topics',
+                                    value: value,
+                                    id: 'topic-' + index
+                                })
+                            ).append(
+                                $('<label>').attr('for', 'topic-' + index).text(value)
+                            )
+                        );
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Electrical Engineering Board Exam Quiz</h1>
+        <nav>
+            {% if current_user.is_authenticated %}
+                <span>Welcome, {{ current_user.username }}!</span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% if current_user.is_authenticated %}
+        <form action="{{ url_for('index') }}" method="POST">
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select name="subject" id="subject">
+                    {% for subject in subjects.keys() %}
+                    <option value="{{ subject }}" {% if subject == selected_subject %}selected{% endif %}>{{ subject }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label>Topics:</label>
+                <div id="topics">
+                    {% for topic in topics %}
+                        <div class="topic-item">
+                            <input type="checkbox" name="topics" value="{{ topic }}" id="topic-{{ loop.index }}" {% if topic in session.get('topics', []) %}checked{% endif %}>
+                            <label for="topic-{{ loop.index }}">{{ topic }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="difficulty">Difficulty:</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="easy" {% if session.get('difficulty') == 'easy' %}selected{% endif %}>Easy</option>
+                    <option value="medium" {% if session.get('difficulty') == 'medium' %}selected{% endif %}>Medium</option>
+                    <option value="hard" {% if session.get('difficulty') == 'hard' %}selected{% endif %}>Hard</option>
+                </select>
+            </div>
+           
+            <input type="submit" value="Start Quiz" class="btn-submit">
+        </form>
+    {% else %}
+        <p>Please login or register to start a quiz.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,572 @@
+[
+  {
+    "id": 2,
+    "text": "Which statement about a charge placed on a dielectric material is true?",
+    "options": "The charge is instantly carried to the material’s surface,The charge immediately lost the atmosphere,The charge is confined to the region in which the charge was placed,The charge increases the conductivity of the material",
+    "correct_answer": "The charge is confined to the region in which the charge was placed",
+    "explanation": "In a dielectric material, the charge remains in the area where it was initially placed because dielectrics do not conduct electricity.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 3,
+    "text": "Which of the following is NOT a property of magnetic field lines?",
+    "options": "The field is stronger where the lines are closer together,The lines intersect surface of equal intensity at right angles,Magnetic field lines have no beginning and no ends,The lines cross themselves only at right angles",
+    "correct_answer": "The lines cross themselves only at right angles",
+    "explanation": "Magnetic field lines do not cross each other at any angle; if they did, it would imply two different directions of the magnetic field at a point.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 4,
+    "text": "Which statement is true?",
+    "options": "Magnetic flux lines have sources only,Magnetic flux lines have sinks only,Magnetic flux lines have both sources and sinks,Magnetic flux lines does not have sources and sinks",
+    "correct_answer": "Magnetic flux lines does not have sources and sinks",
+    "explanation": "Magnetic flux lines form closed loops and do not have sources or sinks, unlike electric field lines which start and end on charges.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 5,
+    "text": "In DC motors, what is the definition of “field resistance”?",
+    "options": "It is the load resistance seen by a generator without considering inductance,It is the resistance of the excitation circuit,It is the resistance of the armature windings plus the load resistance,It is the static resistance of the motor",
+    "correct_answer": "It is the resistance of the excitation circuit",
+    "explanation": "Field resistance in a DC motor refers to the resistance of the circuit that provides the magnetic field, which is essential for the motor’s operation.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 6,
+    "text": "Which of the following are generally less for an alternating current than for a direct current?",
+    "options": "Heating effects,Chemical effects,Magnetic effects,Impedance",
+    "correct_answer": "Chemical effects",
+    "explanation": "Alternating current generally produces less chemical effects compared to direct current, which is used in electroplating and other chemical processes.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 7,
+    "text": "The ability to convert assets to cash quickly is known as _________.",
+    "options": "Solvency,Liquidity,Leverage,Insolvency",
+    "correct_answer": "Liquidity",
+    "explanation": "Liquidity refers to how quickly an asset can be converted into cash without significant loss of value.",
+    "subject": "ESAS",
+    "difficulty": "easy",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 8,
+    "text": "Which of the following does not threaten the operation of a computer?",
+    "options": "Trojan Horse,Worm,Firewall,Hacking",
+    "correct_answer": "Firewall",
+    "explanation": "A firewall is a security measure that protects computers from unauthorized access and threats, unlike the other options which represent threats.",
+    "subject": "ESAS",
+    "difficulty": "easy",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 9,
+    "text": "Protection of workers from impact penetration from falling and flying objects, blows, and from limited electric shock and burns shall be provided where there is reasonable probability of exposure of such hazards.",
+    "options": "Hard Hat,Toe Board,Harness,Belt",
+    "correct_answer": "Hard Hat",
+    "explanation": "A hard hat provides essential protection against head injuries from falling objects and impacts in hazardous work environments.",
+    "subject": "ESAS",
+    "difficulty": "easy",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 10,
+    "text": "Also known as PRC Renewal Law",
+    "options": "RA 8189,RA 8981,RA 7920,RA 184",
+    "correct_answer": "RA 8981",
+    "explanation": "RA 8981 is the PRC Modernization Act, commonly known as the PRC Renewal Law, which updates the Professional Regulation Commission.",
+    "subject": "ESAS",
+    "difficulty": "easy",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 11,
+    "text": "Which of the following are NOT examples of nonvolatile memory in the computer system?",
+    "options": "Flash drives,RAMs,Optical disk,Hard drives",
+    "correct_answer": "RAMs",
+    "explanation": "RAM (Random Access Memory) is volatile, meaning it loses its data when power is turned off, unlike flash drives and hard drives which are nonvolatile.",
+    "subject": "ESAS",
+    "difficulty": "easy",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 12,
+    "text": "Calculate the volume of the solid formed by revolving the area bounded by the parabola y² = 12x and the line x = 3 about the line x = 3.",
+    "options": "131,191,181,151",
+    "correct_answer": "181",
+    "explanation": "The volume is calculated using the method of disks or washers, which involves integrating the area of cross-sections perpendicular to the axis of revolution.",
+    "subject": "Math",
+    "difficulty": "medium",
+    "topics": ["Algebra", "Calculus"]
+  },
+  {
+    "id": 13,
+    "text": "A conic section whose eccentricity is less than one (1) is known as:",
+    "options": "A parabola,An ellipse,A circle,A hyperbola",
+    "correct_answer": "An ellipse",
+    "explanation": "In conic sections, an ellipse is defined by an eccentricity less than one, distinguishing it from parabolas, circles, and hyperbolas.",
+    "subject": "Math",
+    "difficulty": "easy",
+    "topics": ["Algebra", "Calculus"]
+  },
+  {
+    "id": 14,
+    "text": "If Rita can run around the block 5 times in 20 minutes, how many times can she run around the block in an hour?",
+    "options": "10,50,15,100",
+    "correct_answer": "15",
+    "explanation": "If Rita runs 5 times in 20 minutes, she would run 15 times in 60 minutes (1 hour), calculated by scaling up proportionally.",
+    "subject": "Math",
+    "difficulty": "easy",
+    "topics": ["Algebra", "Calculus"]
+  },
+  {
+    "id": 15,
+    "text": "Evaluate the double integral of 1/(x-y) dxdy with inner bounds 2y to 3y and outer bound of 0 to 2.",
+    "options": "ln 3,ln 4,ln 2,ln 8",
+    "correct_answer": "ln 4",
+    "explanation": "This integral evaluates to ln(4) after integrating with respect to x and y, using the provided bounds.",
+    "subject": "Math",
+    "difficulty": "medium",
+    "topics": ["Algebra", "Calculus"]
+  },
+  {
+    "id": 16,
+    "text": "Find the angle in mils subtended by a line 10 yards long at a distance of 5000 yards.",
+    "options": "2.5 mils,1 mil,4 mils,2.04 mils",
+    "correct_answer": "2.04 mils",
+    "explanation": "The angle in mils is calculated using the formula for angular size, which gives 2.04 mils for a 10-yard line at 5000 yards distance.",
+    "subject": "Math",
+    "difficulty": "easy",
+    "topics": ["Algebra", "Calculus"]
+  },
+  {
+    "id": 17,
+    "text": "Also known as PRC Renewal Law",
+    "options": "RA 8189,RA 8981,RA7920,RA 184",
+    "correct_answer": "RA 8981",
+    "explanation": "RA 8981 is the PRC Modernization Act, commonly referred to as the PRC Renewal Law.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 18,
+    "text": "Which of the following are NOT examples of nonvolatile memory in the computer system?",
+    "options": "Flash drives,RAMs,Optical disk,Hard drives",
+    "correct_answer": "RAMs",
+    "explanation": "RAM is volatile memory, meaning it loses its data when power is turned off, unlike flash drives and hard drives which retain data without power.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 19,
+    "text": "What is the term for a deadlock situation that occurs when a program references a different page for almost every instruction and there is NOT even enough real memory to hold MOST of the virtual memory?",
+    "options": "Paging,Thrashing,Scanning,Handshaking",
+    "correct_answer": "Thrashing",
+    "explanation": "Thrashing happens when excessive paging leads to a significant decrease in system performance, causing the system to spend most of its time swapping data between memory and disk.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 20,
+    "text": "Which of the following fluorescent luminaires CANNOT be directly mounted?",
+    "options": "Framing members,Concrete ceiling,Plasters,Plywood ceiling",
+    "correct_answer": "Framing members",
+    "explanation": "Framing members are structural components and should not have fluorescent fixtures directly mounted on them.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 21,
+    "text": "Which of the following does NOT affect owner\u00e2\u20ac\u2122s equity?",
+    "options": "Dividends paid,Invested Capital,Expense to get license of start business,License to start business",
+    "correct_answer": "License to start business",
+    "explanation": "The license to start a business is a prerequisite and does not directly affect owner\u00e2\u20ac\u2122s equity.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 22,
+    "text": "What is the present worth of P100 annuity starting on the end of year 3 and continuing to the end of year 4 if the annual interest rate is 8%?",
+    "options": "120,153,122,160",
+    "correct_answer": "153",
+    "explanation": "The present worth is calculated using the formula for the present value of an annuity.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 23,
+    "text": "What metal is used to recover copper from a solution of copper sulphate?",
+    "options": "Na,Ag,Hg,Fe",
+    "correct_answer": "Fe",
+    "explanation": "Iron is used to displace copper from copper sulfate solution.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 24,
+    "text": "BIOS stands for",
+    "options": "Basic Input Output Society,Basic Input Output System,Base Input Output Society,Base Input Output System",
+    "correct_answer": "Basic Input Output System",
+    "explanation": "BIOS stands for Basic Input Output System, essential for booting the computer.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 25,
+    "text": "Rule used to determine the sizing and rating of circuit conductors and devices.",
+    "options": "Manufacturing rule,Construction rule,Wiring design rule,Installation rule",
+    "correct_answer": "Wiring design rule",
+    "explanation": "Wiring design rules ensure the safe and efficient sizing of circuit conductors and devices.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 26,
+    "text": "Which of the following is very reactive in its pure form?",
+    "options": "Na,He,HCl,CO2",
+    "correct_answer": "Na",
+    "explanation": "Sodium (Na) is highly reactive and must be stored in oil to prevent it from reacting with moisture in the air.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 27,
+    "text": "What refers to a system in which there is a flow of mass across its boundaries?",
+    "options": "Open system,Closed system,Isolated system,Non-flow system",
+    "correct_answer": "Open system",
+    "explanation": "An open system allows mass to flow in and out across its boundaries.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 28,
+    "text": "What do you call a system in which there is a flow of matter through its boundaries? This system usually encloses the device involving mass flow like a compressor, turbine, or nozzle.",
+    "options": "Closed System,Open System,Isolated System,All of these",
+    "correct_answer": "Open System",
+    "explanation": "An open system allows matter to flow across its boundaries, commonly used in turbines, compressors, etc.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 29,
+    "text": "An open system first law should be utilized on all of the following except",
+    "options": "A compressor,A turbine,Piston-cylinder device with no inlet/exhaust valves,A nozzle",
+    "correct_answer": "Piston-cylinder device with no inlet/exhaust valves",
+    "explanation": "A piston-cylinder device without valves operates as a closed system, where no mass flow occurs.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 30,
+    "text": "A thin homogenous metallic plate containing a hole is heated sufficiently to cause expansion. If the coefficient of surface expansion is linear, the area of the hole will",
+    "options": "Increase at twice the rate as the area of the metal increases,Increases at the same rate as the area of the metal increases,Stay the same,Decrease the same rate as the area of the metal decreases",
+    "correct_answer": "Increases at the same rate as the area of the metal increases",
+    "explanation": "The area of the hole increases at the same rate as the metal expands.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 31,
+    "text": "Combination of laminar and turbulent flow.",
+    "options": "Critical,Continuous,Laminar,Turbulent",
+    "correct_answer": "Critical",
+    "explanation": "Critical flow represents the point between laminar and turbulent flow.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 32,
+    "text": "A 40 kg boy walks on a 60 kg log with the speed of 1.5 m/s. What is the speed of the log with respect to the shore?",
+    "options": "1 m/s,0.36 m/s,0.4 m/s,0.6 m/s",
+    "correct_answer": "1 m/s",
+    "explanation": "This is a conservation of momentum problem where the momentum of the boy is equal and opposite to that of the log.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 33,
+    "text": "A byte is composed of how many bits?",
+    "options": "2,4,6,8",
+    "correct_answer": "8",
+    "explanation": "A byte is made up of 8 bits.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 34,
+    "text": "An object that has momentum must also have",
+    "options": "Acceleration,Impulse,Kinetic energy,Potential energy",
+    "correct_answer": "Kinetic energy",
+    "explanation": "Momentum is directly related to kinetic energy.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 35,
+    "text": "In how many years will an investment double in value at 5% simple interest?",
+    "options": "10,14,20,15",
+    "correct_answer": "20",
+    "explanation": "Using the simple interest formula, it will take 20 years for the investment to double.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 36,
+    "text": "A laboratory room keeps a differential vacuum of 0.1 kPa. How much force is acting on a 1m x 2m door?",
+    "options": "400 N,200 N,300 N,150 N",
+    "correct_answer": "200 N",
+    "explanation": "The force is calculated using the pressure difference and the area of the door.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 37,
+    "text": "The mathematical expression (1 + i)^n refers to?",
+    "options": "Compound amount factor,Present worth factor,Capital recovery,Uniform gradient future worth",
+    "correct_answer": "Compound amount factor",
+    "explanation": "This is the compound amount factor formula, used to calculate future value.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 38,
+    "text": "What is the geometric property of a trapezoid\u00e2\u20ac\u2122s height if its bases are parallel?",
+    "options": "Perpendicular to the bases,Parallel to the bases,Bisect the bases,Intersect the bases",
+    "correct_answer": "Perpendicular to the bases",
+    "explanation": "The height of a trapezoid is the perpendicular distance between the parallel bases.",
+    "subject": "ESAS",
+    "difficulty": "medium",
+    "topics": ["Physics", "Chemistry"]
+  },
+  {
+    "id": 39,
+    "text": "Copper loss of a transformer is determined by means of a/an ________ test.",
+    "options": "Open-circuit,Polarity,Short-circuit,Inductive-circuit",
+    "correct_answer": "Short-circuit",
+    "explanation": "Copper loss is determined by the Short-circuit test, where the transformer is tested under short-circuit conditions to measure the copper losses.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 40,
+    "text": "Single-Side Band signal produces a peak to peak voltage of 720 V on voice peaks across a 75-ohm antenna. What is the peak envelope power?",
+    "options": "865 W,856 W,835 W,853 W",
+    "correct_answer": "865 W",
+    "explanation": "The peak envelope power (P) can be calculated using the formula P = (V^2) / (2 * R). Here, V = 720 V and R = 75 \u00ce\u00a9, which gives P = 865 W.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 41,
+    "text": "What is/are the main reason/s for using high voltage in transmission of power in the grid system? in the grid system? \\nI. To transmit bulk power with minimum line losses \\nII. Increase system reliability",
+    "options": "II only,Both I and II,Either I or II,I only",
+    "correct_answer": "I only",
+    "explanation": "The main reason for using high voltage in power transmission is to transmit bulk power with minimum line losses (I). Increasing system reliability (II) is a secondary benefit.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 42,
+    "text": "In an inductive circuit, capacitors are connected in _______ to improve the power factor.",
+    "options": "Parallel,Series,Series-parallel,Parallel-series",
+    "correct_answer": "Parallel",
+    "explanation": "Capacitors are connected in parallel with inductive loads to counteract the inductive reactance and improve the power factor.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 43,
+    "text": "In which type of electronic communication does the information travel in two directions?",
+    "options": "Half duplex,Full duplex,Multiplex,Bicomm",
+    "correct_answer": "Full duplex",
+    "explanation": "Full duplex communication allows information to travel in both directions simultaneously, unlike half duplex which allows communication in only one direction at a time.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 44,
+    "text": "Three 6.66 \u00ce\u00a9 resistors are connected wye. What is the equivalent of each delta connected resistors?",
+    "options": "2.22 \u00ce\u00a9,20 \u00ce\u00a9,11.54 \u00ce\u00a9,10 \u00ce\u00a9",
+    "correct_answer": "20 \u00ce\u00a9",
+    "explanation": "For a wye to delta transformation, the equivalent delta resistance is given by R_delta = (R_wye * R_wye) / R_wye. For three 6.66 \u00ce\u00a9 resistors, the equivalent delta resistance is 20 \u00ce\u00a9.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 45,
+    "text": "A 75-watt lamp is used to illuminate a desk that is 10 ft away. What is the wattage of the lamp if it must operate 12 ft away from the desk to have the same illumination?",
+    "options": "108,112,140,241",
+    "correct_answer": "108",
+    "explanation": "Illumination is inversely proportional to the square of the distance. Using the inverse square law, the wattage required for a 12 ft distance is calculated to be 108 W.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 46,
+    "text": "A device used to measure the impurities in the insulating oil.",
+    "options": "Oil tester,Acid tester,Frequency meter,Ammeter",
+    "correct_answer": "Oil tester",
+    "explanation": "An oil tester is used to measure the impurities and degradation in insulating oil.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Power Systems"]
+  },
+  {
+    "id": 47,
+    "text": "Which of the following insulators will be selected for high voltage applications?",
+    "options": "Strain type,Disc type,Suspension type,Pin type",
+    "correct_answer": "Suspension type",
+    "explanation": "Suspension type insulators are preferred for high voltage applications due to their ability to withstand high voltages and provide reliable insulation.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 48,
+    "text": "The current flowing in L and C at parallel resonance are",
+    "options": "Zero,Equal,Infinite,Different",
+    "correct_answer": "Equal",
+    "explanation": "At parallel resonance, the inductive reactance (L) and capacitive reactance (C) are equal, resulting in equal currents through L and C.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 49,
+    "text": "For an unbalanced load, which connection is suitable?",
+    "options": "3-wire open delta,4-wire wye connection,3-wire delta connection,3-wire wye connection",
+    "correct_answer": "4-wire wye connection",
+    "explanation": "A 4-wire wye connection is suitable for handling unbalanced loads as it provides a neutral point for balancing the load.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 50,
+    "text": "Overhead transmission lines are protected from lightning with the use of",
+    "options": "Overhead grounding conductor,Surge arresters,Either I or II,Neither I nor II",
+    "correct_answer": "Either I or II",
+    "explanation": "Overhead transmission lines can be protected from lightning using either overhead grounding conductors or surge arresters.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 51,
+    "text": "The dc armature winding in which the coil sides are placed a pole pitch apart is called ________ winding.",
+    "options": "Multiplex,Full-pitch,Fractional Pitch,Pole-pitch",
+    "correct_answer": "Full-pitch",
+    "explanation": "A full-pitch winding has its coil sides placed a pole pitch apart, providing better performance and efficiency in DC machines.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 52,
+    "text": "What is the equivalent of 1 + a + a^2?",
+    "options": "0,1,1 + j,-1",
+    "correct_answer": "0",
+    "explanation": "The expression 1 + a + a^2 equals zero if 'a' is a cube root of unity (i.e., a^3 = 1 and a \u00e2\u2030\u00a0 1).",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 53,
+    "text": "The specific resistance of a conductor depends on",
+    "options": "The dimensions of the conductor,The nature of the material of the conductor only,The resistance of the conductor,The area of the conductor",
+    "correct_answer": "The nature of the material of the conductor only",
+    "explanation": "The specific resistance (or resistivity) of a conductor is a material property and is independent of its dimensions or area.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 54,
+    "text": "The load factor is",
+    "options": "Average Load/Installed Capacity,Maximum Load/Average Load,Average Load/Maximum Load,Connected Load/Maximum Load",
+    "correct_answer": "Average Load/Maximum Load",
+    "explanation": "The load factor is calculated as the ratio of average load to maximum load, indicating the efficiency of load utilization.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 55,
+    "text": "In the transformers,",
+    "options": "High tension winding is used near the core,High tension winding is used away from the core,Low tension winding is used near the core,Low tension winding is used away from the core",
+    "correct_answer": "High tension winding is used near the core",
+    "explanation": "In transformers, high tension (high voltage) windings are placed away from the core to reduce insulation requirements and improve performance.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 56,
+    "text": "The effect of series capacitor on a transmission line is to improve",
+    "options": "Steady state stability,Transient stability,Both A and B,None of these",
+    "correct_answer": "Steady state stability",
+    "explanation": "Series capacitors in transmission lines improve steady-state stability by increasing the transmission capacity and reducing the reactance of the line.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 57,
+    "text": "In two-wattmeter method, the reading of one of the wattmeters will be zero when",
+    "options": "Load in one of the phase is zero,Power factor is unity,Power factor is 0.5,Neutral is earthed",
+    "correct_answer": "Power factor is 0.5",
+    "explanation": "In a two-wattmeter method, if the power factor is 0.5 (cos \u00cf\u2020 = 0.5), one of the wattmeters will read zero due to the balanced condition of the power factor.",
+    "subject": "EE",
+    "difficulty": "medium",
+    "topics": ["Electromagnetics", "Power Systems"]
+  },
+  {
+    "id": 58,
+    "text": "The main purpose of the transformer in electrical systems is to",
+    "options": "Change voltage levels,Isolate different circuits,Increase power factor,Decrease losses",
+    "correct_answer": "Change voltage levels",
+    "explanation": "Transformers are primarily used to change voltage levels in electrical systems, allowing efficient transmission and distribution of electrical power.",
+    "subject": "EE",
+    "difficulty": "easy",
+    "topics": ["Electromagnetics", "Power Systems"]
+  }
+]

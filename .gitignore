@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folder
+venv/
+
+# Ignore SQLite database files
+*.db
+*.sqlite3
+
+# Ignore migrations folder (if using Django or Flask)
+migrations/
+
+# Ignore instance folder (if using Flask)
+instance/
+
+# Ignore temporary files created by VS Code
+tempCodeRunnerFile.py
+
+# Ignore log files
+*.log

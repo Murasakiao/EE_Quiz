@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h2>Quiz Completed!</h2>
+        {% if total > 0 %}
+            <p>Your score: <span class="score">{{ score }} out of {{ total }}</span></p>
+            <p>Percentage: <span class="percentage">{{ (score / total * 100)|round(2) }}%</span></p>
+        {% else %}
+            <p>No questions were answered in this session.</p>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="take-another-quiz">Take Another Quiz</a>
+    </div>
+</body>
+</html>
