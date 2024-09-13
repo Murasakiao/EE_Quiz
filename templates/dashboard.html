@@ -1,51 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Electrical Engineering Board Exam Quiz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <h1>Dashboard</h1>
-            <nav>
-                <a href="{{ url_for('index') }}" class="btn btn-secondary">Home</a>
-                <a href="{{ url_for('quiz_setup') }}" class="btn btn-primary">Start a Quiz</a>
-                <a href="{{ url_for('logout') }}" class="btn btn-secondary">Logout</a>
-            </nav>
+<!-- dashboard.html -->
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Electrical Engineering Board Exam Quiz{% endblock %}
+
+{% block content %}
+    <h2>Dashboard</h2>
+    <div class="dashboard-container">
+        <div class="dashboard-card">
+            <h3>Overall Statistics</h3>
+            <p>Total Attempts: {{ total_attempts }}</p>
+            <p>Average Score: {{ avg_score|round(2) * 10 }}%</p>
         </div>
-    </header>
-
-    <main class="container">
-        <div class="dashboard-container">
-            <div class="dashboard-card">
-                <h3>Overall Statistics</h3>
-                <p>Total Attempts: {{ total_attempts }}</p>
-                <p>Average Score: {{ avg_score|round(2) }}%</p>
-            </div>
-
-            <div class="dashboard-card">
-                <h3>Subject Performance</h3>
-                {% for subject in subject_performance %}
-                    <p>{{ subject.subject }}: {{ subject.avg_score|round(2) }}% ({{ subject.attempts }} attempts)</p>
-                {% endfor %}
-            </div>
-
-            <div class="dashboard-card">
-                <h3>Recent Attempts</h3>
-                {% for attempt in recent_attempts %}
-                    <p>{{ attempt.subject }} - Score: {{ attempt.score }}/{{ attempt.total_questions }} ({{ attempt.date.strftime('%Y-%m-%d %H:%M') }})</p>
-                {% endfor %}
-            </div>
+        <div class="dashboard-card">
+            <h3>Subject Performance</h3>
+            {% for subject in subject_performance %}
+                <p>{{ subject.subject }}: {{ subject.avg_score|round(2) * 10 }}% ({{ subject.attempts }} attempts)</p>
+            {% endfor %}
         </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 Electrical Engineering Board Exam Quiz. All rights reserved.</p>
+        <div class="dashboard-card">
+            <h3>Recent Attempts</h3>
+            {% for attempt in recent_attempts %}
+                <p>{{ attempt.subject }} - Score: {{ attempt.score }}/{{ attempt.total_questions }} ({{ attempt.date.strftime('%Y-%m-%d %H:%M') }})</p>
+            {% endfor %}
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+{% endblock %}

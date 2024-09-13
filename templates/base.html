@@ -1,3 +1,4 @@
+<!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +9,46 @@
     {% block extra_head %}{% endblock %}
 </head>
 <body>
-    <header>
-        <h1>Electrical Engineering Board Exam Quiz</h1>
-        <nav>
-            {% if current_user.is_authenticated %}
-                <span>Welcome, {{ current_user.username }}!</span>
-                <a href="{{ url_for('logout') }}">Logout</a>
-            {% else %}
-                <a href="{{ url_for('login') }}">Login</a>
-                <a href="{{ url_for('register') }}">Register</a>
-            {% endif %}
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <h1>Electrical Engineering Board Exam Quiz</h1>
+            <nav>
+                {% if current_user.is_authenticated %}
+                    <span class="welcome-message">Welcome, {{ current_user.username }}!</span>
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('quiz_setup') }}">Start Quiz</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}">Login</a>
+                    <a href="{{ url_for('register') }}">Register</a>
+                {% endif %}
+            </nav>
+        </div>
     </header>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul class="flashes">
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-    <main>
+    
+    <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
         {% block content %}{% endblock %}
     </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Electrical Engineering Board Exam Quiz. All rights reserved.</p>
+        </div>
+    </footer>
+    
     {% block scripts %}{% endblock %}
 </body>
 </html>

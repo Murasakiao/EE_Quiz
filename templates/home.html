@@ -1,0 +1,17 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home - Electrical Engineering Board Exam Quiz{% endblock %}
+
+{% block content %}
+    <h2>Welcome to the Electrical Engineering Board Exam Quiz</h2>
+    {% if current_user.is_authenticated %}
+        <p>Hello, {{ current_user.username }}! What would you like to do today?</p>
+        <ul>
+            <li><a href="{{ url_for('quiz_setup') }}">Start a new quiz</a></li>
+            <li><a href="{{ url_for('dashboard') }}">View your dashboard</a></li>
+        </ul>
+    {% else %}
+        <p>Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('register') }}">register</a> to start using the quiz system.</p>
+    {% endif %}
+{% endblock %}

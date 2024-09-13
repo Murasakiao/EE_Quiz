@@ -11,7 +11,7 @@
         <div class="container">
             <h1>Electrical Engineering Board Exam Quiz</h1>
             <nav>
-                <a href="{{ url_for('index') }}" class="btn btn-home">Home</a>
+                <a href="{{ url_for('home') }}" class="btn btn-home">Home</a>
                 <a href="{{ url_for('dashboard') }}" class="btn btn-dashboard">Dashboard</a>
                 <a href="{{ url_for('logout') }}" class="btn btn-logout">Logout</a>
             </nav>
@@ -45,7 +45,7 @@
                 <p>No questions were answered in this session.</p>
             {% endif %}
             <div class="action-buttons">
-                <a href="{{ url_for('index') }}" class="btn btn-primary">Take Another Quiz</a>
+                <a href="{{ url_for('home') }}" class="btn btn-primary">Take Another Quiz</a>
                 <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">View Dashboard</a>
             </div>
         </div>

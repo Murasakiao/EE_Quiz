@@ -1,0 +1,79 @@
+<!-- quiz_setup.html (formerly index.html) -->
+{% extends "base.html" %}
+
+{% block title %}Quiz Setup - Electrical Engineering Board Exam Quiz{% endblock %}
+
+{% block content %}
+    <h2>Quiz Setup</h2>
+    {% if current_user.is_authenticated %}
+        <form action="{{ url_for('quiz_setup') }}" method="POST" class="quiz-form">
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select name="subject" id="subject" class="form-control">
+                    {% for subject in subjects.keys() %}
+                    <option value="{{ subject }}" {% if subject == selected_subject %}selected{% endif %}>{{ subject }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label>Topics:</label>
+                <div id="topics" class="topic-list">
+                    {% for topic in topics %}
+                        <div class="topic-item">
+                            <input type="checkbox" name="topics" value="{{ topic }}" id="topic-{{ loop.index }}" {% if topic in session.get('topics', []) %}checked{% endif %}>
+                            <label for="topic-{{ loop.index }}">{{ topic }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="difficulty">Difficulty:</label>
+                <select name="difficulty" id="difficulty" class="form-control">
+                    <option value="easy" {% if session.get('difficulty') == 'easy' %}selected{% endif %}>Easy</option>
+                    <option value="medium" {% if session.get('difficulty') == 'medium' %}selected{% endif %}>Medium</option>
+                    <option value="hard" {% if session.get('difficulty') == 'hard' %}selected{% endif %}>Hard</option>
+                </select>
+            </div>
+           
+            <input type="submit" value="Start Quiz" class="btn-submit">
+        </form>
+    {% else %}
+        <p class="login-prompt">Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('register') }}">register</a> to start a quiz.</p>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#subject').change(function() {
+            var subject = $(this).val();
+            $.getJSON('/quiz_setup', {subject: subject}, function(data) {
+                var topicsDiv = $('#topics');
+                topicsDiv.empty();
+                $.each(data, function(index, value) {
+                    topicsDiv.append(
+                        $('<div>').addClass('topic-item').append(
+                            $('<input>').attr({
+                                type: 'checkbox',
+                                name: 'topics',
+                                value: value,
+                                id: 'topic-' + index
+                            })
+                        ).append(
+                            $('<label>').attr('for', 'topic-' + index).text(value)
+                        )
+                    );
+                });
+            });
+        });
+
+        // Enhanced flash message handling
+        $('.flash-message').each(function() {
+            $(this).delay(5000).fadeOut(500);
+        });
+    });
+</script>
+{% endblock %}

@@ -162,7 +162,7 @@ def admin():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -170,7 +170,7 @@ def login():
             if user.email_verified:
                 login_user(user, remember=form.remember_me.data)
                 next_page = request.args.get('next')
-                return redirect(next_page or url_for('index'))
+                return redirect(next_page or url_for('home'))
             else:
                 flash('Please verify your email before logging in.')
                 return redirect(url_for('login'))
@@ -183,13 +183,13 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 # Registration route
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
@@ -204,7 +204,7 @@ def register():
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     form = ResetPasswordRequestForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
@@ -217,10 +217,10 @@ def reset_password_request():
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     user = User.verify_reset_password_token(token)
     if not user:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     form = ResetPasswordForm()
     if form.validate_on_submit():
         user.set_password(form.password.data)
@@ -250,10 +250,13 @@ def verify_email(token):
         db.session.commit()
         return 'Thank you for verifying your email address!'
 
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/quiz_setup', methods=['GET', 'POST'])
 @login_required
-def index():
+def quiz_setup():
     subjects = {
         'Engineering Mathematics': [
             'Algebra and Complex Numbers',
@@ -299,7 +302,7 @@ def index():
         session['difficulty'] = request.form.get('difficulty')
         session['score'] = 0
         session['questions_asked'] = 0
-        return redirect(url_for('quiz_setup'))
+        return redirect(url_for('quiz'))
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         subject = request.args.get('subject')
@@ -307,11 +310,11 @@ def index():
     
     selected_subject = request.args.get('subject', 'Engineering Mathematics')
     topics = subjects.get(selected_subject, [])
-    return render_template('index.html', subjects=subjects, topics=topics, selected_subject=selected_subject)
+    return render_template('quiz_setup.html', subjects=subjects, topics=topics, selected_subject=selected_subject)
 
-@app.route('/quiz_setup', methods=['GET', 'POST'])
+@app.route('/quiz', methods=['GET', 'POST'])
 @login_required
-def quiz_setup():
+def quiz():
     app.logger.debug(f"Session at start of quiz route: {session}")
     
     if request.method == 'POST':
