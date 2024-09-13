@@ -12,6 +12,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, EqualTo, Email
 from flask_mail import Mail, Message
+from sqlalchemy import func
+from datetime import datetime
 from datetime import timedelta
 from time import time
 import jwt
@@ -61,6 +63,7 @@ class User(UserMixin, db.Model):
     role_id = db.Column(db.Integer, db.ForeignKey('role.id'))
     role = db.relationship('Role', back_populates='users')
     email_verified = db.Column(db.Boolean, default=False)
+    quiz_attempts = db.relationship('QuizAttempt', back_populates='user', lazy=True)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -105,6 +108,18 @@ class Question(db.Model):
     subject = db.Column(db.String(100), nullable=False)
     difficulty = db.Column(db.String(20))
     topics = db.relationship('Topic', secondary=question_topics, backref=db.backref('questions', lazy='dynamic'))
+
+class QuizAttempt(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    subject = db.Column(db.String(100), nullable=False)
+    topics = db.Column(db.String(500), nullable=False)
+    difficulty = db.Column(db.String(20), nullable=False)
+    score = db.Column(db.Integer, nullable=False)
+    total_questions = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.DateTime, default=datetime.utcnow)
+
+    user = db.relationship('User', back_populates='quiz_attempts')
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -217,7 +232,7 @@ def reset_password(token):
 @app.route('/profile')
 @login_required
 def profile():
-    return render_template('profile.html', user=current_user)
+    return redirect(url_for('dashboard'))
 
 @app.route('/verify_email/<token>')
 def verify_email(token):
@@ -284,7 +299,7 @@ def index():
         session['difficulty'] = request.form.get('difficulty')
         session['score'] = 0
         session['questions_asked'] = 0
-        return redirect(url_for('quiz'))
+        return redirect(url_for('quiz_setup'))
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         subject = request.args.get('subject')
@@ -294,9 +309,9 @@ def index():
     topics = subjects.get(selected_subject, [])
     return render_template('index.html', subjects=subjects, topics=topics, selected_subject=selected_subject)
 
-@app.route('/quiz', methods=['GET', 'POST'])
+@app.route('/quiz_setup', methods=['GET', 'POST'])
 @login_required
-def quiz():
+def quiz_setup():
     app.logger.debug(f"Session at start of quiz route: {session}")
     
     if request.method == 'POST':
@@ -348,8 +363,42 @@ def quiz():
 def result():
     score = session.get('score', 0)
     total_questions = session.get('questions_asked', 0)
+    subject = session.get('subject')
+    topics = session.get('topics', [])
+    difficulty = session.get('difficulty')
+    
+    save_quiz_attempt(current_user.id, subject, topics, difficulty, score, total_questions)
+    
     session.clear()
-    return render_template('result.html', score=score, total=total_questions)
+    return render_template('result.html', 
+                           score=score, 
+                           total=total_questions, 
+                           subject=subject, 
+                           topics=topics, 
+                           difficulty=difficulty)
+
+@app.route('/dashboard')
+@login_required
+def dashboard():
+    # Get overall statistics
+    total_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).count()
+    avg_score = db.session.query(func.avg(QuizAttempt.score)).filter_by(user_id=current_user.id).scalar() or 0
+    
+    # Get subject-wise performance
+    subject_performance = db.session.query(
+        QuizAttempt.subject,
+        func.avg(QuizAttempt.score).label('avg_score'),
+        func.count(QuizAttempt.id).label('attempts')
+    ).filter_by(user_id=current_user.id).group_by(QuizAttempt.subject).all()
+    
+    # Get recent quiz attempts
+    recent_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).order_by(QuizAttempt.date.desc()).limit(5).all()
+    
+    return render_template('dashboard.html', 
+                           total_attempts=total_attempts, 
+                           avg_score=avg_score,
+                           subject_performance=subject_performance,
+                           recent_attempts=recent_attempts)
 
 def init_db():
     db.create_all()
@@ -382,6 +431,25 @@ def send_verification_email(user):
     
     msg = Message(subject=subject, recipients=[user.email], body=body)
     mail.send(msg)
+
+def save_quiz_attempt(user_id, subject, topics, difficulty, score, total_questions):
+    quiz_attempt = QuizAttempt(
+        user_id=user_id,
+        subject=subject,
+        topics=','.join(topics),
+        difficulty=difficulty,
+        score=score,
+        total_questions=total_questions
+    )
+    db.session.add(quiz_attempt)
+    db.session.commit()
+
+def add_role_to_user(user, role_name):
+    role = Role.query.filter_by(name=role_name).first()
+    if role is None:
+        role = Role(name=role_name)
+        db.session.add(role)
+    user.role = role
 
 admin = Admin(app, name='Quiz Admin', template_mode='bootstrap3')
 admin.add_view(ModelView(Question, db.session))

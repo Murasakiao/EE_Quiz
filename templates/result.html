@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Result</title>
+    <title>Quiz Result - Electrical Engineering Board Exam Quiz</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="result-container">
-        <h2>Quiz Completed!</h2>
-        {% if total > 0 %}
-            <p>Your score: <span class="score">{{ score }} out of {{ total }}</span></p>
-            <p>Percentage: <span class="percentage">{{ (score / total * 100)|round(2) }}%</span></p>
-        {% else %}
-            <p>No questions were answered in this session.</p>
-        {% endif %}
-        <a href="{{ url_for('index') }}" class="take-another-quiz">Take Another Quiz</a>
-    </div>
+    <header class="site-header">
+        <div class="container">
+            <h1>Electrical Engineering Board Exam Quiz</h1>
+            <nav>
+                <a href="{{ url_for('index') }}" class="btn btn-home">Home</a>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-dashboard">Dashboard</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="result-container">
+            <h2>Quiz Completed!</h2>
+            {% if total > 0 %}
+                <div class="result-summary">
+                    <p>Your score: <span class="score">{{ score }} out of {{ total }}</span></p>
+                    <p>Percentage: <span class="percentage">{{ (score / total * 100)|round(2) }}%</span></p>
+                </div>
+                <div class="quiz-details">
+                    <h3>Quiz Details:</h3>
+                    <p><strong>Subject:</strong> {{ subject }}</p>
+                    <p><strong>Topics:</strong> {{ ", ".join(topics) }}</p>
+                    <p><strong>Difficulty:</strong> {{ difficulty|capitalize }}</p>
+                </div>
+                <div class="result-feedback">
+                    {% if (score / total * 100) >= 80 %}
+                        <p class="feedback excellent">Excellent work! Keep it up!</p>
+                    {% elif (score / total * 100) >= 60 %}
+                        <p class="feedback good">Good job! There's room for improvement.</p>
+                    {% else %}
+                        <p class="feedback needs-improvement">You might want to review these topics again.</p>
+                    {% endif %}
+                </div>
+            {% else %}
+                <p>No questions were answered in this session.</p>
+            {% endif %}
+            <div class="action-buttons">
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Take Another Quiz</a>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">View Dashboard</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Electrical Engineering Board Exam Quiz. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
