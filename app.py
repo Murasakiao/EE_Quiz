@@ -252,7 +252,18 @@ def verify_email(token):
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    total_attempts = 0
+    avg_score = 0
+    if current_user.is_authenticated:
+        total_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).count()
+        avg_score = db.session.query(func.avg(QuizAttempt.score)).filter_by(user_id=current_user.id).scalar() or 0
+    return render_template('home.html', total_attempts=total_attempts, avg_score=avg_score)
+
+@app.route('/random_question')
+@login_required
+def random_question():
+    question = Question.query.order_by(func.random()).first()
+    return render_template('random_question.html', question=question)
 
 @app.route('/quiz_setup', methods=['GET', 'POST'])
 @login_required
