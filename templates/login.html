@@ -1,35 +1,54 @@
-<!-- login.html -->
 {% extends "base.html" %}
+{% block title %}Login - Electrical Engineering Board Exam Quiz{% endblock %}
 {% block content %}
-    <h1>Sign In</h1>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul class="flashes">
-                {% for message in messages %}
-                    <li>{{ message }}</li>
+    <div class="container mx-auto mt-8 px-4 py-8 max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Sign In</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="bg-red-500 text-white p-4 mb-4 rounded-lg">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form action="" method="post" novalidate class="bg-gray-800 p-6 rounded-lg">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-4">
+                <label for="username" class="block mb-2">{{ form.username.label }}</label>
+                {{ form.username(class="w-full p-2 bg-gray-700 rounded") }}
+                {% for error in form.username.errors %}
+                    <span class="text-red-500 text-sm">[{{ error }}]</span>
                 {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <div>
-            {{ form.username.label }}
-            {{ form.username() }}
-            {% for error in form.username.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block mb-2">{{ form.password.label }}</label>
+                {{ form.password(class="w-full p-2 bg-gray-700 rounded") }}
+                {% for error in form.password.errors %}
+                    <span class="text-red-500 text-sm">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+            <div class="mb-4">
+                <label class="flex items-center">
+                    {{ form.remember_me(class="mr-2") }} {{ form.remember_me.label }}
+                </label>
+            </div>
+
+            <div>
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    {{ form.submit.label }}
+                </button>
+            </div>
+        </form>
+
+        <div class="mt-4 text-center">
+            <p class="mb-2">New User? <a href="{{ url_for('register') }}" class="text-blue-400 hover:underline">Click to Register!</a></p>
+            <p>Forgot Your Password? <a href="{{ url_for('reset_password_request') }}" class="text-blue-400 hover:underline">Click to Reset It</a></p>
         </div>
-        <div>
-            {{ form.password.label }}
-            {{ form.password() }}
-            {% for error in form.password.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div>{{ form.remember_me() }} {{ form.remember_me.label }}</div>
-        <div>{{ form.submit() }}</div>
-    </form>
-    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
-    <p>Forgot Your Password? <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a></p>
+    </div>
 {% endblock %}

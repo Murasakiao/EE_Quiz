@@ -1,37 +1,49 @@
-<!-- register.html -->
 {% extends "base.html" %}
+{% block title %}Register - Electrical Engineering Board Exam Quiz{% endblock %}
 {% block content %}
-    <h1>Register</h1>
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <div>
-            {{ form.username.label }}
-            {{ form.username() }}
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.email.label }}
-            {{ form.email() }}
-            {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.password.label }}
-            {{ form.password() }}
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.confirm_password.label }}
-            {{ form.confirm_password() }}
-            {% for error in form.confirm_password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        {{ form.submit() }}
-    </form>
+    <div class="container mx-auto mt-8 px-4 py-8 max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Register</h1>
+
+        <form action="" method="post" class="bg-gray-800 p-6 rounded-lg">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-4">
+                <label for="username" class="block mb-2">{{ form.username.label }}</label>
+                {{ form.username(class="w-full p-2 bg-gray-700 rounded") }}
+                {% for error in form.username.errors %}
+                    <span class="text-red-500 text-sm">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block mb-2">{{ form.email.label }}</label>
+                {{ form.email(class="w-full p-2 bg-gray-700 rounded") }}
+                {% for error in form.email.errors %}
+                    <span class="text-red-500 text-sm">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block mb-2">{{ form.password.label }}</label>
+                {{ form.password(class="w-full p-2 bg-gray-700 rounded") }}
+                {% for error in form.password.errors %}
+                    <span class="text-red-500 text-sm">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+            <div class="mb-4">
+                <label for="confirm_password" class="block mb-2">{{ form.confirm_password.label }}</label>
+                {{ form.confirm_password(class="w-full p-2 bg-gray-700 rounded") }}
+                {% for error in form.confirm_password.errors %}
+                    <span class="text-red-500 text-sm">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    {{ form.submit.label }}
+                </button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

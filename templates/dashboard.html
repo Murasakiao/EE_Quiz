@@ -11,14 +11,34 @@
         <div class="bg-gray-800 p-6 rounded-lg">
             <h3 class="text-xl font-semibold mb-4">Subject Performance</h3>
             {% for subject in subject_performance %}
-                <p>{{ subject.subject }}: {{ (subject.avg_score * 10)|round(2)  }}% ({{ subject.attempts }} attempts)</p>
+                <p>{{ subject.subject }}: {{ (subject.avg_score * 10)|round(2) }}% ({{ subject.attempts }} attempts)</p>
             {% endfor %}
         </div>
     </div>
+
     <div class="mt-6 bg-gray-800 p-6 rounded-lg">
         <h3 class="text-xl font-semibold mb-4">Recent Attempts</h3>
-        {% for attempt in recent_attempts %}
-            <p class="mb-2">{{ attempt.subject }} - Score: {{ attempt.score }}/{{ attempt.total_questions }} ({{ attempt.date.strftime('%Y-%m-%d %H:%M') }})</p>
-        {% endfor %}
+        <table class="table-auto w-full bg-gray-800 rounded-lg">
+            <thead>
+                <tr class="bg-gray-700 text-white">
+                    <th class="p-4 text-left">Subject</th>
+                    <th class="p-4 text-left">Score</th>
+                    <th class="p-4 text-left">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for attempt in recent_attempts %}
+                    <tr class="bg-gray-900 hover:bg-gray-700">
+                        <td class="p-4">{{ attempt.subject }}</td>
+                        <td class="p-4">{{ attempt.score }}/{{ attempt.total_questions }}</td>
+                        <td class="p-4">{{ attempt.date.strftime('%Y-%m-%d %H:%M') }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="p-4 text-center">No recent attempts found</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}

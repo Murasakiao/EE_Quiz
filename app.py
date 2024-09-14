@@ -406,7 +406,7 @@ def dashboard():
     ).filter_by(user_id=current_user.id).group_by(QuizAttempt.subject).all()
     
     # Get recent quiz attempts
-    recent_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).order_by(QuizAttempt.date.desc()).limit(5).all()
+    recent_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).order_by(QuizAttempt.date.desc()).all()
     
     return render_template('dashboard.html', 
                            total_attempts=total_attempts, 

@@ -15,7 +15,7 @@
            
             <div class="mb-4">
                 <label class="block mb-2">Topics:</label>
-                <div id="topics" class="grid grid-cols-2 gap-2">
+                <div id="topics" class="flex flex-col gap-2">
                     {% for topic in topics %}
                         <div class="flex items-center">
                             <input type="checkbox" name="topics" value="{{ topic }}" id="topic-{{ loop.index }}" class="mr-2" {% if topic in session.get('topics', []) %}checked{% endif %}>
