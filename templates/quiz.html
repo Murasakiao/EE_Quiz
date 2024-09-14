@@ -1,29 +1,22 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Question</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Quiz Question - Electrical Engineering Board Exam Quiz{% endblock %}
+{% block content %}
     {% if question and options %}
-        <h2>{{ question.text }}</h2>
-        <form method="POST" class="quiz-form">
+        <h2 class="text-2xl font-bold mb-6">{{ question.text }}</h2>
+        <form method="POST" class="bg-gray-800 p-6 rounded-lg">
             {% for option in options %}
-            <div class="option-container">
-                <div class="radio-label-container">
-                  <input type="radio" name="answer" id="option-{{ loop.index }}" value="{{ option }}" required>
-                  <label for="option-{{ loop.index }}">{{ option }}</label>
-                </div>
-              </div>
+            <div class="mb-4">
+                <label class="flex items-center">
+                    <input type="radio" name="answer" value="{{ option }}" class="mr-2" required>
+                    <span>{{ option }}</span>
+                </label>
+            </div>
             {% endfor %}
             <input type="hidden" name="correct_answer" value="{{ question.correct_answer }}">
-            <input type="submit" value="Submit">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
         </form>
     {% else %}
-        <p>No questions available at the moment. Please try again later.</p>
-        <a href="{{ url_for('home') }}">Back to Home</a>
+        <p class="bg-gray-800 p-6 rounded-lg">No questions available at the moment. Please try again later.</p>
+        <a href="{{ url_for('home') }}" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Back to Home</a>
     {% endif %}
-</body>
-</html>
+{% endblock %}

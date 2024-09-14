@@ -1,49 +1,45 @@
-<!-- quiz_setup.html (formerly index.html) -->
 {% extends "base.html" %}
-
 {% block title %}Quiz Setup - Electrical Engineering Board Exam Quiz{% endblock %}
-
 {% block content %}
-    <h2>Quiz Setup</h2>
+    <h2 class="text-2xl font-bold mb-6">Quiz Setup</h2>
     {% if current_user.is_authenticated %}
-        <form action="{{ url_for('quiz_setup') }}" method="POST" class="quiz-form">
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <select name="subject" id="subject" class="form-control">
+        <form action="{{ url_for('quiz_setup') }}" method="POST" class="bg-gray-800 p-6 rounded-lg">
+            <div class="mb-4">
+                <label for="subject" class="block mb-2">Subject:</label>
+                <select name="subject" id="subject" class="w-full bg-gray-700 p-2 rounded">
                     {% for subject in subjects.keys() %}
                     <option value="{{ subject }}" {% if subject == selected_subject %}selected{% endif %}>{{ subject }}</option>
                     {% endfor %}
                 </select>
             </div>
            
-            <div class="form-group">
-                <label>Topics:</label>
-                <div id="topics" class="topic-list">
+            <div class="mb-4">
+                <label class="block mb-2">Topics:</label>
+                <div id="topics" class="grid grid-cols-2 gap-2">
                     {% for topic in topics %}
-                        <div class="topic-item">
-                            <input type="checkbox" name="topics" value="{{ topic }}" id="topic-{{ loop.index }}" {% if topic in session.get('topics', []) %}checked{% endif %}>
+                        <div class="flex items-center">
+                            <input type="checkbox" name="topics" value="{{ topic }}" id="topic-{{ loop.index }}" class="mr-2" {% if topic in session.get('topics', []) %}checked{% endif %}>
                             <label for="topic-{{ loop.index }}">{{ topic }}</label>
                         </div>
                     {% endfor %}
                 </div>
             </div>
            
-            <div class="form-group">
-                <label for="difficulty">Difficulty:</label>
-                <select name="difficulty" id="difficulty" class="form-control">
+            <div class="mb-4">
+                <label for="difficulty" class="block mb-2">Difficulty:</label>
+                <select name="difficulty" id="difficulty" class="w-full bg-gray-700 p-2 rounded">
                     <option value="easy" {% if session.get('difficulty') == 'easy' %}selected{% endif %}>Easy</option>
                     <option value="medium" {% if session.get('difficulty') == 'medium' %}selected{% endif %}>Medium</option>
                     <option value="hard" {% if session.get('difficulty') == 'hard' %}selected{% endif %}>Hard</option>
                 </select>
             </div>
            
-            <input type="submit" value="Start Quiz" class="btn-submit">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Start Quiz</button>
         </form>
     {% else %}
-        <p class="login-prompt">Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('register') }}">register</a> to start a quiz.</p>
+        <p class="bg-gray-800 p-6 rounded-lg">Please <a href="{{ url_for('login') }}" class="text-blue-400 hover:underline">login</a> or <a href="{{ url_for('register') }}" class="text-blue-400 hover:underline">register</a> to start a quiz.</p>
     {% endif %}
 {% endblock %}
-
 {% block scripts %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -55,12 +51,13 @@
                 topicsDiv.empty();
                 $.each(data, function(index, value) {
                     topicsDiv.append(
-                        $('<div>').addClass('topic-item').append(
+                        $('<div>').addClass('flex items-center').append(
                             $('<input>').attr({
                                 type: 'checkbox',
                                 name: 'topics',
                                 value: value,
-                                id: 'topic-' + index
+                                id: 'topic-' + index,
+                                class: 'mr-2'
                             })
                         ).append(
                             $('<label>').attr('for', 'topic-' + index).text(value)
@@ -68,11 +65,6 @@
                     );
                 });
             });
-        });
-
-        // Enhanced flash message handling
-        $('.flash-message').each(function() {
-            $(this).delay(5000).fadeOut(500);
         });
     });
 </script>
