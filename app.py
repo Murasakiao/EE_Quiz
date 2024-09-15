@@ -134,7 +134,7 @@ class Question(db.Model):
 class QuizAttempt(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, ForeignKey('user.id'), nullable=False)
-    question_id = db.Column(db.Integer, ForeignKey('question.id'))
+    question_id = db.Column(db.Integer, ForeignKey('question.id'), nullable=False)
     subject = db.Column(db.String(100), nullable=False)
     topics = db.Column(db.String(500), nullable=False)
     difficulty = db.Column(db.String(20), nullable=False)

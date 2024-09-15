@@ -6,8 +6,8 @@ __pycache__/
 venv/
 
 # Ignore SQLite database files
-*.db
-*.sqlite3
+#*.db
+#*.sqlite3
 
 # Ignore migrations folder (if using Django or Flask)
 migrations/
@@ -20,3 +20,8 @@ tempCodeRunnerFile.py
 
 # Ignore log files
 *.log
+
+__pycache__
+*.pyc
+instance/
+.env
