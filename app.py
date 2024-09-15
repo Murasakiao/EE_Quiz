@@ -12,9 +12,9 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, EqualTo, Email
 from flask_mail import Mail, Message
-from sqlalchemy import func
-from datetime import datetime
-from datetime import timedelta
+from sqlalchemy import func, ForeignKey
+from sqlalchemy.orm import relationship
+from datetime import datetime, timedelta
 from time import time
 import jwt
 import random
@@ -64,6 +64,13 @@ class User(UserMixin, db.Model):
     role = db.relationship('Role', back_populates='users')
     email_verified = db.Column(db.Boolean, default=False)
     quiz_attempts = db.relationship('QuizAttempt', back_populates='user', lazy=True)
+    rank = db.Column(db.Integer, default=8)
+    honor_points = db.Column(db.Integer, default=5)
+    current_streak = db.Column(db.Integer, default=0)
+    longest_streak = db.Column(db.Integer, default=0)
+    last_quiz_date = db.Column(db.Date)
+    achievements = db.relationship('Achievement', secondary='user_achievements', back_populates='users')
+    quiz_attempts = db.relationship('QuizAttempt', back_populates='user', cascade='all, delete-orphan')
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -90,6 +97,18 @@ class User(UserMixin, db.Model):
         except:
             return
         return User.query.get(id)
+    
+class Achievement(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String(200))
+    condition = db.Column(db.String(200))
+    users = db.relationship('User', secondary='user_achievements', back_populates='achievements')
+
+user_achievements = db.Table('user_achievements',
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
+    db.Column('achievement_id', db.Integer, db.ForeignKey('achievement.id'), primary_key=True)
+)
 
 class Topic(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -107,19 +126,23 @@ class Question(db.Model):
     explanation = db.Column(db.String(500))
     subject = db.Column(db.String(100), nullable=False)
     difficulty = db.Column(db.String(20))
-    topics = db.relationship('Topic', secondary=question_topics, backref=db.backref('questions', lazy='dynamic'))
+    topics = relationship('Topic', secondary=question_topics, backref=db.backref('questions', lazy='dynamic'))
+    quiz_attempts = relationship('QuizAttempt', back_populates='question')
 
 class QuizAttempt(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_id = db.Column(db.Integer, ForeignKey('user.id'), nullable=False)
+    question_id = db.Column(db.Integer, ForeignKey('question.id'), nullable=False)
     subject = db.Column(db.String(100), nullable=False)
     topics = db.Column(db.String(500), nullable=False)
     difficulty = db.Column(db.String(20), nullable=False)
     score = db.Column(db.Integer, nullable=False)
     total_questions = db.Column(db.Integer, nullable=False)
-    date = db.Column(db.DateTime, default=datetime.utcnow)
+    date = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    completion_time = db.Column(db.Integer)  # in minutes
 
-    user = db.relationship('User', back_populates='quiz_attempts')
+    user = relationship('User', back_populates='quiz_attempts')
+    question = relationship('Question', back_populates='quiz_attempts')
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -382,6 +405,7 @@ def result():
     difficulty = session.get('difficulty')
     
     save_quiz_attempt(current_user.id, subject, topics, difficulty, score, total_questions)
+    update_user_stats(current_user.id, score, subject)
     
     session.clear()
     return render_template('result.html', 
@@ -394,25 +418,37 @@ def result():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    # Get overall statistics
-    total_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).count()
-    avg_score = db.session.query(func.avg(QuizAttempt.score)).filter_by(user_id=current_user.id).scalar() or 0
+    user = current_user
+    total_quizzes = QuizAttempt.query.filter_by(user_id=user.id).count()
+    highest_score = db.session.query(func.max(QuizAttempt.score)).filter_by(user_id=user.id).scalar() or 0
+    favorite_subject = db.session.query(
+        QuizAttempt.subject, 
+        func.count(QuizAttempt.id).label('count')
+    ).filter_by(user_id=user.id).group_by(QuizAttempt.subject).order_by(func.count(QuizAttempt.id).desc()).first()
     
-    # Get subject-wise performance
-    subject_performance = db.session.query(
+    recent_quizzes = QuizAttempt.query.filter_by(user_id=user.id).order_by(QuizAttempt.date.desc()).limit(15).all()
+    
+    subject_progress = db.session.query(
         QuizAttempt.subject,
         func.avg(QuizAttempt.score).label('avg_score'),
         func.count(QuizAttempt.id).label('attempts')
-    ).filter_by(user_id=current_user.id).group_by(QuizAttempt.subject).all()
-    
-    # Get recent quiz attempts
-    recent_attempts = QuizAttempt.query.filter_by(user_id=current_user.id).order_by(QuizAttempt.date.desc()).all()
+    ).filter_by(user_id=user.id).group_by(QuizAttempt.subject).all()
+
+    achievements = current_user.achievements
     
     return render_template('dashboard.html', 
-                           total_attempts=total_attempts, 
-                           avg_score=avg_score,
-                           subject_performance=subject_performance,
-                           recent_attempts=recent_attempts)
+                           user=current_user,
+                           total_quizzes=total_quizzes,
+                           highest_score=highest_score,
+                           favorite_subject=favorite_subject,
+                           recent_quizzes=recent_quizzes,
+                           subject_progress=subject_progress,
+                           achievements=current_user.achievements)
+
+@app.template_filter('unique')
+def unique_filter(seq):
+    seen = set()
+    return [x for x in seq if not (x in seen or seen.add(x))]
 
 def init_db():
     db.create_all()
@@ -453,7 +489,8 @@ def save_quiz_attempt(user_id, subject, topics, difficulty, score, total_questio
         topics=','.join(topics),
         difficulty=difficulty,
         score=score,
-        total_questions=total_questions
+        total_questions=total_questions,
+        date=datetime.utcnow()  # Ensure date is always set
     )
     db.session.add(quiz_attempt)
     db.session.commit()
@@ -465,6 +502,188 @@ def add_role_to_user(user, role_name):
         db.session.add(role)
     user.role = role
 
+# Functions to update user stats
+def update_user_stats(user_id, quiz_score, quiz_subject):
+    user = User.query.get(user_id)
+    today = datetime.utcnow().date()
+
+    # Update streak
+    if user.last_quiz_date:
+        days_since_last_quiz = (today - user.last_quiz_date).days
+        if days_since_last_quiz == 1:
+            user.current_streak += 1
+            user.longest_streak = max(user.longest_streak, user.current_streak)
+        elif days_since_last_quiz > 1:
+            user.current_streak = 1
+    else:
+        user.current_streak = 1
+
+    user.last_quiz_date = today
+
+    # Update honor points and rank
+    honor_gained = calculate_honor(quiz_score, quiz_subject)
+    user.honor_points += honor_gained
+    user.rank = calculate_rank(user.honor_points)
+
+    # Check for new achievements
+    check_achievements(user)
+
+    db.session.commit()
+
+def calculate_honor(quiz_score, quiz_subject):
+    # Implement your own logic here
+    base_honor = quiz_score
+    subject_multiplier = 1.5 if quiz_subject == 'Advanced Topics' else 1
+    return int(base_honor * subject_multiplier)
+
+def calculate_rank(honor_points):
+    # Implement your own ranking system
+    if honor_points < 100:
+        return 8
+    elif honor_points < 150:
+        return 7
+    elif honor_points < 300:
+        return 6
+    # ... and so on
+
+def check_achievements(user):
+    # Get the total number of Electrical Engineering quizzes
+    total_number_of_electrical_engineering_quizzes = Question.query.filter_by(subject='Electrical Engineering').count()
+    
+    # Get the total number of subjects
+    total_number_of_subjects = db.session.query(Question.subject).distinct().count()
+    
+    # Get the dates of user's quiz attempts
+    quiz_attempt_dates = [attempt.date.date() for attempt in user.quiz_attempts if attempt.date is not None]
+    quiz_attempts_dates_in_a_row = max_consecutive_days(quiz_attempt_dates)
+    
+    # Group quiz attempts by quiz
+    quiz_attempts_grouped_by_quiz = {}
+    for attempt in user.quiz_attempts:
+        if attempt.question_id not in quiz_attempts_grouped_by_quiz:
+            quiz_attempts_grouped_by_quiz[attempt.question_id] = []
+        quiz_attempts_grouped_by_quiz[attempt.question_id].append(attempt)
+    
+    # Calculate consecutive perfect scores
+    scores = [attempt.score == attempt.total_questions for attempt in user.quiz_attempts]
+    consecutive_perfect_scores = max_consecutive_true(scores)
+    
+    all_achievements = Achievement.query.all()
+    for achievement in all_achievements:
+        if achievement not in user.achievements:
+            # Create a dictionary with all the variables needed for condition evaluation
+            condition_vars = {
+                'user': user,
+                'total_number_of_electrical_engineering_quizzes': total_number_of_electrical_engineering_quizzes,
+                'total_number_of_subjects': total_number_of_subjects,
+                'quiz_attempts_dates_in_a_row': quiz_attempts_dates_in_a_row,
+                'quiz_attempts_grouped_by_quiz': quiz_attempts_grouped_by_quiz,
+                'consecutive_perfect_scores': consecutive_perfect_scores
+            }
+            condition_met = eval(achievement.condition, condition_vars)
+            if condition_met:
+                user.achievements.append(achievement)
+
+# Make sure these helper functions are defined
+def max_consecutive_days(dates):
+    if not dates:
+        return 0
+    dates = sorted(set(dates))
+    max_streak = current_streak = 1
+    for i in range(1, len(dates)):
+        if (dates[i] - dates[i-1]).days == 1:
+            current_streak += 1
+            max_streak = max(max_streak, current_streak)
+        else:
+            current_streak = 1
+    return max_streak
+
+def max_consecutive_true(bool_list):
+    max_streak = current_streak = 0
+    for value in bool_list:
+        if value:
+            current_streak += 1
+            max_streak = max(max_streak, current_streak)
+        else:
+            current_streak = 0
+    return max_streak
+
+# Populate initial achievements
+def populate_achievements():
+    achievements = [
+        Achievement(
+            name="Quiz Novice",
+            description="Complete your first quiz",
+            condition="len(user.quiz_attempts) >= 1"
+        ),
+        Achievement(
+            name="Streak Master",
+            description="Maintain a 7-day streak",
+            condition="user.current_streak >= 7"
+        ),
+        Achievement(
+            name="Perfect Score",
+            description="Get 100% on any quiz",
+            condition="any(attempt.score == attempt.total_questions for attempt in user.quiz_attempts)"
+        ),
+        Achievement(
+            name="Circuit Prodigy",
+            description="Complete all quizzes in the Electrical Engineering section.",
+            condition="len([quiz for quiz in user.quiz_attempts if quiz.subject == 'Electrical Engineering']) >= total_number_of_electrical_engineering_quizzes"
+        ),
+        Achievement(
+            name="Mathematics Maven",
+            description="Achieve a score of 90% or above in all Engineering Mathematics quizzes.",
+            condition="all(attempt.score >= 0.9 * attempt.total_questions for attempt in user.quiz_attempts if attempt.subject == 'Engineering Mathematics')"
+        ),
+        Achievement(
+            name="Science Sleuth",
+            description="Correctly answer all questions in a single Engineering Sciences quiz.",
+            condition="any(attempt.score == attempt.total_questions for attempt in user.quiz_attempts if attempt.subject == 'Engineering Sciences')"
+        ),
+        Achievement(
+            name="Allied Expert",
+            description="Complete at least one quiz with a score of 80% or higher in Allied Subjects.",
+            condition="any(attempt.score >= 0.8 * attempt.total_questions for attempt in user.quiz_attempts if attempt.subject == 'Allied Subjects')"
+        ),
+        Achievement(
+            name="Quiz Marathoner",
+            description="Attempt quizzes for 30 consecutive days.",
+            condition="user.quiz_attempts_dates_in_a_row >= 30"
+        ),
+        Achievement(
+            name="Master of Memory",
+            description="Retain a 100% score in the same quiz on three separate attempts.",
+            condition="any(attempts_in_quiz >= 3 and all(attempt.score == attempt.total_questions for attempt in attempts) for quiz, attempts in user.quiz_attempts_grouped_by_quiz.items())"
+        ),
+        Achievement(
+            name="Diligent Learner",
+            description="Complete quizzes from all available subjects.",
+            condition="len(set(quiz.subject for quiz in user.quiz_attempts)) == total_number_of_subjects"
+        ),
+        Achievement(
+            name="Flash Quiz",
+            description="Complete a quiz in under 10 minutes.",
+            condition="any(attempt.completion_time <= 10 for attempt in user.quiz_attempts)"
+        ),
+        # Achievement(
+        #     name="Top Reviewer",
+        #     description="Provide feedback on 10 or more quizzes.",
+        #     condition="len(user.feedbacks) >= 10"
+        # ), ctrl + /
+        Achievement(
+            name="Perfect Streak",
+            description="Achieve a perfect score in 5 consecutive quizzes.",
+            condition="len(consecutive_perfect_scores) >= 5"
+        )
+            # Add more achievements as needed
+    ]
+    db.session.add_all(achievements)
+    db.session.commit()
+
+# Call this function when initializing your app
+
+
 admin = Admin(app, name='Quiz Admin', template_mode='bootstrap3')
 admin.add_view(ModelView(Question, db.session))
 admin.add_view(ModelView(Topic, db.session))
@@ -474,4 +693,5 @@ admin.add_view(ModelView(Role, db.session))
 if __name__ == '__main__':
     with app.app_context():
         init_db()
+        populate_achievements()
     app.run(debug=True)

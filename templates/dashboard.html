@@ -1,44 +1,71 @@
 {% extends "base.html" %}
 {% block title %}Dashboard - Electrical Engineering Board Exam Quiz{% endblock %}
+
 {% block content %}
-    <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-4">Overall Statistics</h3>
-            <p>Total Attempts: {{ total_attempts }}</p>
-            <p>Average Score: {{ avg_score|round(2) * 10 }}%</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-4">Subject Performance</h3>
-            {% for subject in subject_performance %}
-                <p>{{ subject.subject }}: {{ (subject.avg_score * 10)|round(2) }}% ({{ subject.attempts }} attempts)</p>
+<div class="container mx-auto mt-8 px-4">
+    <h2 class="text-2xl font-bold mb-6">User Dashboard</h2>
+    
+    <!-- User Profile Section -->
+    <div class="bg-gray-800 p-6 rounded-lg mb-6">
+        <h3 class="text-xl font-semibold mb-4">User Profile</h3>
+        <p class="mb-2"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="mb-2"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="mb-2"><strong>Total Quizzes:</strong> {{ total_quizzes }}</p>
+        <p class="mb-2"><strong>Highest Score:</strong> {{ highest_score }}</p>
+        {% if favorite_subject %}
+        <p><strong>Favorite Subject:</strong> {{ favorite_subject.subject }}</p>
+        {% endif %}
+    </div>
+    
+    <!-- Subject Progress Chart -->
+    <div class="bg-gray-800 p-6 rounded-lg mb-6">
+        <h3 class="text-xl font-semibold mb-4">Subject Progress</h3>
+        <div class="bg-gray-700 p-4 rounded">
+            {% for subject in subject_progress %}
+            <div class="flex justify-between mb-2">
+                <span class="font-medium">{{ subject.subject }}</span>
+                <div class="flex-grow ml-4 bg-blue-500 rounded">
+                    <div class="bg-blue-600 text-white text-xs p-1 rounded" style="width: {{ subject.avg_score }}%;">
+                        {{ (subject.avg_score * 10)|round(2) }}%
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
 
-    <div class="mt-6 bg-gray-800 p-6 rounded-lg">
-        <h3 class="text-xl font-semibold mb-4">Recent Attempts</h3>
-        <table class="table-auto w-full bg-gray-800 rounded-lg">
-            <thead>
-                <tr class="bg-gray-700 text-white">
-                    <th class="p-4 text-left">Subject</th>
-                    <th class="p-4 text-left">Score</th>
-                    <th class="p-4 text-left">Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for attempt in recent_attempts %}
-                    <tr class="bg-gray-900 hover:bg-gray-700">
-                        <td class="p-4">{{ attempt.subject }}</td>
-                        <td class="p-4">{{ attempt.score }}/{{ attempt.total_questions }}</td>
-                        <td class="p-4">{{ attempt.date.strftime('%Y-%m-%d %H:%M') }}</td>
-                    </tr>
-                {% else %}
-                    <tr>
-                        <td colspan="3" class="p-4 text-center">No recent attempts found</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <!-- User Stats Section -->
+    <div class="user-stats">
+        <h3 class="text-xl font-semibold mb-4">User Stats</h3>
+        <p class="mb-2"><strong>Rank:</strong> {{ user.rank }}</p>
+        <p class="mb-2"><strong>Honor:</strong> {{ user.honor_points }}</p>
+        <p class="mb-2"><strong>Current Streak:</strong> {{ user.current_streak }} days</p>
+        <p><strong>Longest Streak:</strong> {{ user.longest_streak }} days</p>
     </div>
+    
+    <!-- Achievements Section -->
+    <div class="achievements">
+        <h3 class="text-xl font-semibold mb-4">Achievements</h3>
+        <ul class="list-disc pl-5">
+            {% for achievement in achievements|unique %}
+            <li>{{ achievement.name }} - {{ achievement.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    
+    <!-- Recent Quizzes Section -->
+    <div class="bg-gray-800 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-4">Recent Quizzes</h3>
+        <ul class="list-disc pl-5">
+            {% for quiz in recent_quizzes %}
+            <li class="mb-2">
+                <span class="font-medium">{{ quiz.subject }}</span> -
+                <span class="text-blue-400">{{ quiz.score }}/{{ quiz.total_questions }}</span> -
+                <span class="text-gray-400">{{ quiz.date.strftime('%Y-%m-%d %H:%M') }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}
