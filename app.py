@@ -25,14 +25,14 @@ import logging
 # configs
 load_dotenv()  # Load environment variables from .env file
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '55197e79f9c0f860af246d97a6360cb0'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///quiz.db'
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'colesjulius3@gmail.com'
-app.config['MAIL_PASSWORD'] = 'rcqz gmrd gtcx vgfw'
-app.config['MAIL_DEFAULT_SENDER'] = 'colesjulius3@gmail.com'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS') == 'True'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
 app.config['REMEMBER_COOKIE_DURATION'] = timedelta(days=14)
 mail = Mail(app)
 serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
@@ -624,7 +624,9 @@ def populate_achievements():
     for achievement in achievements:
         existing = Achievement.query.filter_by(name=achievement.name).first()
         if not existing:
-            db.session.query(Achievement).filter_by(id=achievement.id).update(achievement)
+            db.session.add(achievement)
+        else:
+            existing.description = achievement.description
     db.session.commit()
 
 admin = Admin(app, name='Quiz Admin', template_mode='bootstrap3')
