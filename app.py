@@ -16,11 +16,14 @@ from sqlalchemy import func, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime, timedelta
 from time import time
+from dotenv import load_dotenv
+import os
 import jwt
 import random
 import logging
 
 # configs
+load_dotenv()  # Load environment variables from .env file
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '55197e79f9c0f860af246d97a6360cb0'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///quiz.db'
