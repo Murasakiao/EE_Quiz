@@ -10,7 +10,7 @@ venv/
 #*.sqlite3
 
 # Ignore migrations folder (if using Django or Flask)
-migrations/
+#migrations/
 
 # Ignore instance folder (if using Flask)
 instance/
