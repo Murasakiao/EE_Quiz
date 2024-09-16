@@ -6,7 +6,8 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import FlushError
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///quiz.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/Lourdes/Desktop/Web Development/the_quiz_app/data/quiz.db'
+
 db.init_app(app)
 
 def import_json_to_db():

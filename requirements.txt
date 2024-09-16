@@ -4,11 +4,11 @@ click==8.1.7
 colorama==0.4.6
 dnspython==2.6.1
 email-validator==2.2.0
-flask==3.0.3
+flask==2.3.0
 Flask-Admin==1.6.1
 Flask-Login==0.6.3
 flask-mail==0.10.0
-Flask-Migrate==4.0.7
+Flask-Migrate==4.0.4
 flask-sqlalchemy==3.1.1
 flask-wtf==1.2.1
 greenlet==3.0.3

@@ -24,9 +24,10 @@ import logging
 
 # configs
 load_dotenv()  # Load environment variables from .env file
+basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data/quiz.db')
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
 app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS') == 'True'
@@ -134,7 +135,7 @@ class Question(db.Model):
 class QuizAttempt(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, ForeignKey('user.id'), nullable=False)
-    question_id = db.Column(db.Integer, ForeignKey('question.id'), nullable=False)
+    question_id = db.Column(db.Integer, ForeignKey('question.id'), nullable=True)  # Change to nullable=True
     subject = db.Column(db.String(100), nullable=False)
     topics = db.Column(db.String(500), nullable=False)
     difficulty = db.Column(db.String(20), nullable=False)
@@ -356,6 +357,7 @@ def quiz():
     if request.method == 'POST':
         answer = request.form.get('answer')
         correct_answer = request.form.get('correct_answer')
+        question_id = request.form.get('question_id')  # Add this line
         if answer == correct_answer:
             session['score'] = session.get('score', 0) + 1
         session['questions_asked'] = session.get('questions_asked', 0) + 1
@@ -406,7 +408,7 @@ def result():
     topics = session.get('topics', [])
     difficulty = session.get('difficulty')
     
-    save_quiz_attempt(current_user.id, subject, topics, difficulty, score, total_questions)
+    save_quiz_attempt(current_user.id, subject, topics, difficulty, score, total_questions, None)
     update_user_stats(current_user.id, score, subject)
     
     session.clear()
@@ -453,7 +455,7 @@ def unique_filter(seq):
     return [x for x in seq if not (x in seen or seen.add(x))]
 
 def init_db():
-    db.create_all()
+    db.create_all()    
     if Role.query.count() == 0:
         admin_role = Role(name='admin')
         user_role = Role(name='user')
@@ -484,15 +486,16 @@ def send_verification_email(user):
     msg = Message(subject=subject, recipients=[user.email], body=body)
     mail.send(msg)
 
-def save_quiz_attempt(user_id, subject, topics, difficulty, score, total_questions):
+def save_quiz_attempt(user_id, subject, topics, difficulty, score, total_questions, question_id=None):
     quiz_attempt = QuizAttempt(
         user_id=user_id,
         subject=subject,
-        topics=','.join(topics),
+        topics=','.join(topics) if isinstance(topics, list) else topics,
         difficulty=difficulty,
         score=score,
         total_questions=total_questions,
-        date=datetime.utcnow()  # Ensure date is always set
+        date=datetime.utcnow(),
+        question_id=question_id
     )
     db.session.add(quiz_attempt)
     db.session.commit()
@@ -629,6 +632,25 @@ def populate_achievements():
             existing.description = achievement.description
     db.session.commit()
 
+# Add this function to check if the database needs to be initialized
+def init_db_if_needed():
+    db_path = app.config['SQLALCHEMY_DATABASE_URI'].replace('sqlite:///', '')
+    if not os.path.exists(db_path):
+        with app.app_context():
+            db.create_all()
+            init_db()
+            populate_achievements()
+            print("Database initialized.")
+    else:
+        print("Database already exists.")
+
+# Add this route to trigger database initialization (for Render deployment)
+def init_app(app):
+    with app.app_context():
+        db.create_all()
+        init_db()
+        populate_achievements()
+
 admin = Admin(app, name='Quiz Admin', template_mode='bootstrap3')
 admin.add_view(ModelView(Question, db.session))
 admin.add_view(ModelView(Topic, db.session))
@@ -636,7 +658,7 @@ admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Role, db.session))
 
 if __name__ == '__main__':
-    with app.app_context():
-        init_db()
-        populate_achievements()
+    init_app(app)
     app.run(debug=True)
+else:
+    init_app(app)
