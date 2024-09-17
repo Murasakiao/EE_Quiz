@@ -337,6 +337,7 @@ def quiz_setup():
         session['subject'] = request.form.get('subject')
         session['topics'] = request.form.getlist('topics')
         session['difficulty'] = request.form.get('difficulty')
+        print(f"Debug - Quiz setup: difficulty={session['difficulty']}")  # Add this line
         session['score'] = 0
         session['questions_asked'] = 0
         return redirect(url_for('quiz'))
@@ -408,8 +409,10 @@ def result():
     topics = session.get('topics', [])
     difficulty = session.get('difficulty')
     
+    print(f"Debug - Result route: score={score}, difficulty={difficulty}")  # Add this line
+    
     save_quiz_attempt(current_user.id, subject, topics, difficulty, score, total_questions, None)
-    update_user_stats(current_user.id, score, subject)
+    update_user_stats(current_user.id, score, difficulty)
     
     session.clear()
     return render_template('result.html', 
@@ -508,7 +511,7 @@ def add_role_to_user(user, role_name):
     user.role = role
 
 # Functions to update user stats
-def update_user_stats(user_id, quiz_score, quiz_subject):
+def update_user_stats(user_id, quiz_score, difficulty):
     user = User.query.get(user_id)
     today = datetime.utcnow().date()
 
@@ -526,7 +529,9 @@ def update_user_stats(user_id, quiz_score, quiz_subject):
     user.last_quiz_date = today
 
     # Update honor points and rank
-    honor_gained = calculate_honor(quiz_score, quiz_subject)
+    print(f"Debug - Before honor calculation: quiz_score={quiz_score}, difficulty={difficulty}")  # Add this line
+    honor_gained = calculate_honor(quiz_score, difficulty)
+    print(f"Debug - After honor calculation: honor_gained={honor_gained}")  # Add this line
     user.honor_points += honor_gained
     user.rank = calculate_rank(user.honor_points)
 
@@ -535,19 +540,34 @@ def update_user_stats(user_id, quiz_score, quiz_subject):
 
     db.session.commit()
 
-def calculate_honor(quiz_score, quiz_subject):
-    # Implement your own logic here
-    base_honor = quiz_score
-    subject_multiplier = 1.5 if quiz_subject == 'Advanced Topics' else 1
-    return int(base_honor * subject_multiplier)
+def calculate_honor(quiz_score, difficulty):
+    # Ensure quiz_score is a number
+    base_honor = float(quiz_score)
+
+    # Difficulty multiplier
+    difficulty_multipliers = {
+        'easy': 1.0,
+        'medium': 1.25,
+        'hard': 1.5
+    }
+
+    # Get the difficulty multiplier, default to 1.0 if not recognized
+    difficulty_multiplier = difficulty_multipliers.get(difficulty.lower(), 1.0)
+
+    # Apply multiplier
+    honor = base_honor * difficulty_multiplier
+
+    # Debug print
+    print(f"Debug - Base Honor: {base_honor}, Difficulty: {difficulty}, Multiplier: {difficulty_multiplier}, Final Honor: {honor}")
+
+    return int(honor)
 
 def calculate_rank(honor_points):
-    # Implement your own ranking system
     if honor_points < 100:
         return 8
-    elif honor_points < 150:
+    elif honor_points < 250:
         return 7
-    elif honor_points < 300:
+    elif honor_points < 400:
         return 6
     # ... and so on
 

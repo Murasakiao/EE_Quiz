@@ -1,31 +1,110 @@
-<!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Electrical Engineering Board Exam Quiz{% endblock %}</title>
+    <title>{% block title %}EE Board Exam Quiz{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        h1 {
+        margin-top: 0; /* Reset the default margin-top */
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #1a202c;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+        .side-menu.active {
+            left: 0;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .overlay.active {
+            display: block;
+        }
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #1a202c;
+            border: 1px solid #4a5568;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0;
+            z-index: 50;
+        }
+        main {
+        padding-top: 0rem; /* Reduce the padding-top */
+        }
+        .user-dropdown.active {
+            display: block;
+        }
+        .nav-button {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            color: #a0aec0;
+            transition: color 0.3s ease;
+        }
+        .nav-button:hover {
+            color: #fff;
+        }
+        .nav-bar {
+            padding: 0.5rem 1rem;
+            /* border-bottom: 1px solid #2d3748; */
+            margin-bottom: 0;
+        }
+    </style>
     {% block extra_head %}{% endblock %}
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex flex-col">
-    <nav class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="{{ url_for('home') }}" class="text-xl font-bold">EE Board Exam Quiz</a>
-            <div>
-                {% if current_user.is_authenticated %}
-                    <span class="mr-4">Welcome, {{ current_user.username }}!</span>
-                    <a href="{{ url_for('home') }}" class="mr-4">Home</a>
-                    <a href="{{ url_for('dashboard') }}" class="mr-4">Dashboard</a>
-                    <a href="{{ url_for('quiz_setup') }}" class="mr-4">Start Quiz</a>
-                    <a href="{{ url_for('logout') }}">Logout</a>
-                {% else %}
-                    <a href="{{ url_for('login') }}" class="mr-4">Login</a>
-                    <a href="{{ url_for('register') }}">Register</a>
-                {% endif %}
+    <nav class="bg-gray-800 nav-bar relative z-10">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <button id="menu-toggle" class="text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="flex items-center space-x-4">
+                    <button class="nav-button"><i class="fas fa-moon"></i></button>
+                    <button class="nav-button"><i class="fas fa-star"></i></button>
+                    <button class="nav-button"><i class="fas fa-bell"></i></button>
+                    <button id="user-menu-button" class="nav-button relative">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div id="user-dropdown" class="user-dropdown">
+                        <a href="{{ url_for('home') }}" class="block px-4 py-2 hover:bg-gray-700"><i class="fas fa-home mr-2"></i>Home</a>
+                        <a href="{{ url_for('dashboard') }}" class="block px-4 py-2 hover:bg-gray-700"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a>
+                        <a href="{{ url_for('quiz_setup') }}" class="block px-4 py-2 hover:bg-gray-700"><i class="fas fa-play mr-2"></i>Start Quiz</a>
+                        <a href="{{ url_for('logout') }}" class="block px-4 py-2 hover:bg-gray-700"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
+
+    <div id="side-menu" class="side-menu">
+        <div class="p-4">
+            <a href="#" class="block py-2">Practice</a>
+            <a href="#" class="block py-2">Challenges</a>
+            <a href="#" class="block py-2">Community</a>
+            <a href="#" class="block py-2">Learn</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
 
     <main class="flex-grow">
         <div class="container mx-auto px-4 py-8 max-w-4xl">
@@ -51,6 +130,28 @@
         </div>
     </footer>
    
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('side-menu').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        });
+
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('side-menu').classList.remove('active');
+            this.classList.remove('active');
+        });
+
+        document.getElementById('user-menu-button').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('user-dropdown').classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#user-dropdown') && !e.target.closest('#user-menu-button')) {
+                document.getElementById('user-dropdown').classList.remove('active');
+            }
+        });
+    </script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

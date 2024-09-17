@@ -2,6 +2,11 @@
 {% block title %}Dashboard - Electrical Engineering Board Exam Quiz{% endblock %}
 
 {% block content %}
+<!-- <style>
+    .achievements {
+    margin-top: 20px; /* Adjust the value as needed */
+} -->
+</style>
 <div class="container mx-auto mt-8 px-4">
     <h2 class="text-2xl font-bold mb-6">User Dashboard</h2>
     
@@ -25,8 +30,8 @@
             <div class="flex justify-between mb-2">
                 <span class="font-medium">{{ subject.subject }}</span>
                 <div class="flex-grow ml-4 bg-blue-500 rounded">
-                    <div class="bg-blue-600 text-white text-xs p-1 rounded" style="width: {{ subject.avg_score }}%;">
-                        {{ (subject.avg_score * 10)|round(2) }}%
+                    <div class="bg-blue-600 text-white text-xs p-1 rounded" style="width: {{ (subject.avg_score / 10) * 100 }}%;">
+                        {{ ((subject.avg_score / 10) * 100)|round(2) }}%
                     </div>
                 </div>
             </div>
@@ -37,14 +42,14 @@
     <!-- User Stats Section -->
     <div class="user-stats">
         <h3 class="text-xl font-semibold mb-4">User Stats</h3>
-        <p class="mb-2"><strong>Rank:</strong> {{ user.rank }}</p>
+        <p class="mb-2"><strong>Rank:</strong> {{ user.rank }}th kyu</p>
         <p class="mb-2"><strong>Honor:</strong> {{ user.honor_points }}</p>
         <p class="mb-2"><strong>Current Streak:</strong> {{ user.current_streak }} days</p>
         <p><strong>Longest Streak:</strong> {{ user.longest_streak }} days</p>
     </div>
     
     <!-- Achievements Section -->
-    <div class="achievements">
+    <div class="achievements" style="margin-top: 20px; margin-bottom: 20px;">
         <h3 class="text-xl font-semibold mb-4">Achievements</h3>
         <ul class="list-disc pl-5">
             {% for achievement in achievements|unique %}
