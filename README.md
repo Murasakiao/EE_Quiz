@@ -10,6 +10,7 @@ A comprehensive web application designed to help electrical engineering students
 ## 📦 Feature Screenshot
 
 ![Feature Screenshot](./data/screenshot_page_1.png)
+![Feature Screenshot](./data/screenshot_page_4.png)
 ![Feature Screenshot](./data/screenshot_page_2.png)
 ![Feature Screenshot](./data/screenshot_page_3.png)
 
