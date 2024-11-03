@@ -7,6 +7,8 @@ A comprehensive web application designed to help electrical engineering students
 ![Flask](https://img.shields.io/badge/flask-2.0+-blue.svg)
 ![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-1.4+-blue.svg)
 
+## 📦 Feature Screenshot
+
 ![Feature Screenshot](./data/screenshot_page_1.png)
 ![Feature Screenshot](./data/screenshot_page_2.png)
 ![Feature Screenshot](./data/screenshot_page_3.png)
@@ -76,7 +78,7 @@ A comprehensive web application designed to help electrical engineering students
 1. Clone the repository
 ```bash
 git clone https://github.com/Murasakiao/EE_Quiz
-cd ee-quiz
+cd ee_quiz
 ```
 
 2. Create and activate virtual environment
