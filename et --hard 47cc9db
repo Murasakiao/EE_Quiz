@@ -1,0 +1,22 @@
+[33m47cc9db[m[33m ([m[1;36mHEAD -> [m[1;32mupgrading-the-question-database[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m version 1.3a:     - enhanced base.html, used icons in the nav bar     - fixed honor calculations for difficulties     - semi revised ranking system
+[33mc4af309[m preparing for 4th attempt
+[33m9d5ea20[m preparing for third attemp t for deployment
+[33m1da989a[m Prepare for Render deployment
+[33m0386ea4[m revise version 1.2d
+[33me74ecf7[m adjustments
+[33m088a74e[m added gunicorn in requirements.txt
+[33m14d1668[m "Add Procfile for deployment"
+[33mcd1d587[m edited .env file
+[33m3442bce[m added .env file
+[33me80c226[m final fix before first pre deployment
+[33md6fe59e[m trying to fix some errors, just backing up the files
+[33m2ea3acf[m version 1.2c in progress implementation of codewars' UI
+[33mfb0b729[m fixed some bugs in the dashboard
+[33me70d36a[m implementing codewars' inspired theme version 1.2b
+[33mb74bb63[m initial improvement of UI inspired by codewarss
+[33m157bdb5[m Updated routes and templates for quiz app version 1.2
+[33m8984a7b[m - Added role_id to the User model for role-based access and linked the QuizAttempt model to track quiz history. - Created a new QuizAttempt model to store quiz details (subject, topics, difficulty, score, and total questions). - Implemented the add_role_to_user() function to assign a default 'user' role during registration. - Updated the registration route to assign a role and send a verification email. - Extended the result route to save quiz attempts upon completion. - Created a new dashboard route to display total attempts, average score, subject-wise performance, and recent quiz attempts. - Redirected the profile route to the user dashboard for a more detailed overview.
+[33m2019227[m final commit for version 1.0
+[33m27d6521[m added a doc for future quiz app enhancement
+[33m2d60803[m Initial commit, add .gitignore and remove unnecessary files from tracking
+[33ma536995[m Initial commit
