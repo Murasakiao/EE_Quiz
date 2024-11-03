@@ -221,7 +221,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Julius Emmanuel C. Darang - colesjulius3@gmail.com
 
 Project Link: https://github.com/Murasakiao/EE_Quiz
 
