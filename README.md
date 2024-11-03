@@ -7,6 +7,8 @@ A comprehensive web application designed to help electrical engineering students
 ![Flask](https://img.shields.io/badge/flask-2.0+-blue.svg)
 ![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-1.4+-blue.svg)
 
+![Feature Screenshot](./data/Screenshot (133).png)
+
 ## 🌟 Features
 
 ### User Management
@@ -70,8 +72,8 @@ A comprehensive web application designed to help electrical engineering students
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/ee-board-exam-quiz.git
-cd ee-board-exam-quiz
+git clone https://github.com/Murasakiao/EE_Quiz
+cd ee-quiz
 ```
 
 2. Create and activate virtual environment
@@ -215,7 +217,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - your.email@example.com
 
-Project Link: https://github.com/yourusername/ee-board-exam-quiz
+Project Link: https://github.com/Murasakiao/EE_Quiz
 
 ---
 
