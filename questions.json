@@ -1294,5 +1294,505 @@
     "subject": "Engineering Science and Allied Subjects",
     "difficulty": "medium",
     "topics": ["EE Laws, Codes, Professional Ethics, BOSH & Electrical Standards and Practices"]
+},
+{
+  "id": 116,
+  "text": "Base load plants are designed to supply power at _______________.",
+  "options": "Low capital cost and low operating cost,High capital cost and low operating cost,Low capital cost and high operating cost,High capital cost and high operating cost",
+  "correct_answer": "High capital cost and low operating cost",
+  "explanation": "Base load plants are typically designed with high capital investment to ensure efficiency and reliable low-cost operation over long periods.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Power Systems", "Energy Generation"]
+},
+{
+  "id": 2,
+  "text": "A transponder with a bandwidth of 400 MHz uses polarization diversity. If the wavelength allocated to transmit a single telephone channel is 4 kHz, how many telephone channels can be carried by the transponder?",
+  "options": "300,000,400,000,100,000,200,000",
+  "correct_answer": "200,000",
+  "explanation": "Dividing the total bandwidth by the bandwidth allocated per channel provides the number of channels supported.",
+  "subject": "Electronics",
+  "difficulty": "medium",
+  "topics": ["Telecommunications", "Signal Processing"]
+},
+{
+  "id": 3,
+  "text": "Resistor 1 has twice the resistance of resistor 2. They are connected in parallel to a battery. Find the ratio of thermal energy generation rate in resistor 1 to that in resistor 2?",
+  "options": "2:1,1:4,4:1,1:2",
+  "correct_answer": "1:2",
+  "explanation": "Since resistors are connected in parallel, the power dissipated in each is inversely proportional to their resistance.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Circuit Analysis", "Thermal Energy"]
+},
+{
+  "id": 4,
+  "text": "A room air conditioner is to be attached to an individual branch circuit. If the load is 12 A, what is the minimum size of branch circuit required?",
+  "options": "15 A,13.8 A,8.7 A,9.6 A",
+  "correct_answer": "15 A",
+  "explanation": "The branch circuit must handle more than the load's current to ensure safe operation under typical conditions.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Power Systems", "Electrical Circuits"]
+},
+{
+  "id": 5,
+  "text": "The energy that is stored in a 25 microF capacitor is W(t) = 12 sin^2 (377t) joule. Determine the current in the capacitor.",
+  "options": "6 cos 377t,6 sin 377t,9.23 sin wt,9.23 cos wt",
+  "correct_answer": "9.23 cos wt",
+  "explanation": "The current is derived from the rate of change of the stored energy in the capacitor.",
+  "subject": "Electronics",
+  "difficulty": "medium",
+  "topics": ["Capacitors", "AC Circuits"]
+},
+{
+  "id": 6,
+  "text": "The amplitude modulation generated at a very low voltage or power amplifier is _________ modulation.",
+  "options": "Minimum,Collector,High-level,Low-level",
+  "correct_answer": "Low-level",
+  "explanation": "Low-level modulation occurs before the final amplification stage and is typically used for smaller signals.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Modulation Techniques", "Communication Systems"]
+},
+{
+  "id": 7,
+  "text": "Which of the following type of fault uses only the equivalent positive impedance of the circuit in the short-circuit calculation?",
+  "options": "Line-to-line fault,Double-line-to-ground fault,Three-phase fault,Single-line-to-ground fault",
+  "correct_answer": "Three-phase fault",
+  "explanation": "A three-phase fault is symmetrical and requires only the positive-sequence impedance for calculation.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Fault Analysis", "Power Systems"]
+},
+{
+  "id": 8,
+  "text": "Which of the following define the meaning of load factor?",
+  "options": "The ratio of average load to installed capacity.,The ratio of maximum load to average load.,The ratio of average load to maximum load.,The ratio of connected load to maximum load.",
+  "correct_answer": "The ratio of average load to maximum load.",
+  "explanation": "Load factor is a measure of the efficiency of electricity usage over a period, showing the ratio of average load to peak load.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Power Systems", "Energy Management"]
+},
+{
+  "id": 9,
+  "text": "If the magnetic flux through a certain region is changing with time ________.",
+  "options": "A current must flow around the boundary,An electric field must exist at the boundary,A magnetic field must exist at the boundary,An emf must exist around the boundary",
+  "correct_answer": "An emf must exist around the boundary",
+  "explanation": "Faraday's Law states that a changing magnetic flux induces an electromotive force (emf) around a closed loop.",
+  "subject": "Electromagnetism",
+  "difficulty": "easy",
+  "topics": ["Electromagnetic Induction"]
+},
+{
+  "id": 10,
+  "text": "In a capacitor start motor, the capacitor is replaced by an inductor having the same reactance as the capacitor. Then the motor will ____________.",
+  "options": "Be damaged,Start but run at a slow speed,Start and run at its rated speed,Not start",
+  "correct_answer": "Not start",
+  "explanation": "Replacing the capacitor with an inductor would prevent the phase shift needed for the motor to start.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Motors", "Inductors"]
+},
+{
+  "id": 11,
+  "text": "Which of the following is true regarding power factor correction?",
+  "options": "It increases reactive power consumption.,It reduces apparent power.,It decreases real power consumption.,It decreases system efficiency.",
+  "correct_answer": "It reduces apparent power.",
+  "explanation": "Power factor correction reduces the apparent power drawn from the source, thus improving efficiency and reducing losses.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Power Factor", "Energy Efficiency"]
+},
+{
+  "id": 12,
+  "text": "Which of the following voltage regulation systems is used for load changes at low loads?",
+  "options": "On-load tap-changing,Off-load tap-changing,Inductive regulation,Capacitive regulation",
+  "correct_answer": "Off-load tap-changing",
+  "explanation": "Off-load tap-changing allows the adjustment of voltage but requires the transformer to be de-energized, often used in low load situations.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Voltage Regulation", "Power Systems"]
+},
+{
+  "id": 13,
+  "text": "In an alternating current circuit, the power factor is defined as the ratio of:",
+  "options": "True power to apparent power.,Apparent power to true power.,Reactive power to apparent power.,Reactive power to true power.",
+  "correct_answer": "True power to apparent power.",
+  "explanation": "Power factor is the ratio of real (true) power, which performs work, to apparent power, which is the combination of real and reactive power.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Power Factor", "AC Circuits"]
+},
+{
+  "id": 14,
+  "text": "Which of the following materials is typically used as a conductor in electrical wiring?",
+  "options": "Aluminum,Iron,Tungsten,Rubber",
+  "correct_answer": "Aluminum",
+  "explanation": "Aluminum is widely used in electrical wiring because of its cost-effectiveness and relatively low resistance.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Materials", "Electrical Conductors"]
+},
+{
+  "id": 15,
+  "text": "In a three-phase system, what is the phase difference between any two adjacent phases?",
+  "options": "60 degrees,90 degrees,120 degrees,180 degrees",
+  "correct_answer": "120 degrees",
+  "explanation": "In a balanced three-phase system, the phase difference between any two adjacent phases is 120 degrees.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Three-Phase Systems", "AC Circuits"]
+},
+{
+  "id": 16,
+  "text": "In electrical transmission, a higher voltage level results in:",
+  "options": "Higher power losses,Higher current,Lower power losses,Lower current",
+  "correct_answer": "Lower power losses",
+  "explanation": "Transmitting power at higher voltages reduces current, which in turn reduces power losses due to the resistance of transmission lines.",
+  "subject": "Power Systems",
+  "difficulty": "medium",
+  "topics": ["Electrical Transmission", "Power Systems"]
+},
+{
+  "id": 17,
+  "text": "Which of the following motors is most suitable for high starting torque applications?",
+  "options": "Shaded-pole motor,Synchronous motor,Series motor,Capacitor-start motor",
+  "correct_answer": "Series motor",
+  "explanation": "A series motor provides high starting torque, making it suitable for applications like electric trains or cranes.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Electric Motors", "Power Systems"]
+},
+{
+  "id": 18,
+  "text": "When an AC circuit contains resistance only, the current is:",
+  "options": "In phase with the voltage.,Out of phase with the voltage by 90 degrees.,Leading the voltage by 90 degrees.,Lagging the voltage by 90 degrees.",
+  "correct_answer": "In phase with the voltage.",
+  "explanation": "In a purely resistive AC circuit, the current and voltage are in phase with each other, meaning their peaks occur simultaneously.",
+  "subject": "AC Circuits",
+  "difficulty": "easy",
+  "topics": ["Electrical Circuits", "Resistance"]
+},
+{
+  "id": 19,
+  "text": "In a transformer, the primary winding is connected to:",
+  "options": "The load,The high-voltage side,The low-voltage side,The power source",
+  "correct_answer": "The power source",
+  "explanation": "The primary winding of a transformer is connected to the power source, while the secondary winding is connected to the load.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Transformers", "Power Systems"]
+},
+{
+  "id": 20,
+  "text": "Which of the following factors does not affect the capacitance of a capacitor?",
+  "options": "Distance between plates,Area of plates,Dielectric material,Material of the plates",
+  "correct_answer": "Material of the plates",
+  "explanation": "The material of the plates does not affect the capacitance directly; it is instead influenced by the area of the plates, the distance between them, and the dielectric material used.",
+  "subject": "Electronics",
+  "difficulty": "medium",
+  "topics": ["Capacitance", "Electronics"]
+},
+{
+  "id": 21,
+  "text": "Which of the following devices is used to measure electric current?",
+  "options": "Voltmeter,Ammeter,Ohmmeter,Wattmeter",
+  "correct_answer": "Ammeter",
+  "explanation": "An ammeter is specifically designed to measure electric current in a circuit.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Measuring Instruments", "Electric Current"]
+},
+{
+  "id": 22,
+  "text": "What type of transformer is used to isolate different parts of a circuit?",
+  "options": "Autotransformer,Step-up transformer,Isolation transformer,Current transformer",
+  "correct_answer": "Isolation transformer",
+  "explanation": "An isolation transformer is used to electrically isolate different parts of a circuit while transferring power between them.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Transformers", "Power Systems"]
+},
+{
+  "id": 23,
+  "text": "In a synchronous motor, the rotor rotates at:",
+  "options": "Sub-synchronous speed,Synchronous speed,Supra-synchronous speed,Constant speed regardless of load",
+  "correct_answer": "Synchronous speed",
+  "explanation": "In a synchronous motor, the rotor rotates at the same speed as the rotating magnetic field, known as the synchronous speed.",
+  "subject": "Electrical Engineering",
+  "difficulty": "medium",
+  "topics": ["Synchronous Motors", "Electrical Machines"]
+},
+{
+  "id": 24,
+  "text": "The efficiency of a transformer mainly depends on which of the following losses?",
+  "options": "Core loss and winding loss,Core loss and eddy current loss,Winding loss and eddy current loss,Hysteresis loss and copper loss",
+  "correct_answer": "Core loss and winding loss",
+  "explanation": "Transformer efficiency is determined by the combination of core losses (including hysteresis and eddy current losses) and winding losses (copper losses).",
+  "subject": "Power Systems",
+  "difficulty": "medium",
+  "topics": ["Transformers", "Electrical Efficiency"]
+},
+{
+  "id": 25,
+  "text": "What happens when a short circuit occurs in an electrical system?",
+  "options": "The current decreases significantly.,The voltage increases.,The current increases drastically.,The resistance increases.",
+  "correct_answer": "The current increases drastically.",
+  "explanation": "During a short circuit, the resistance in the circuit drops, causing the current to increase drastically, which can lead to damage if not interrupted.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Electrical Circuits", "Faults"]
+},
+{
+  "id": 26,
+  "text": "Which of the following is true about a semiconductor diode in forward bias?",
+  "options": "It allows current to flow.,It blocks current.,It behaves like a resistor.,It behaves like a capacitor.",
+  "correct_answer": "It allows current to flow.",
+  "explanation": "In forward bias, a semiconductor diode allows current to flow through it, as the forward voltage exceeds the diode's threshold voltage.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Semiconductors", "Diodes"]
+},
+{
+  "id": 27,
+  "text": "Which type of connection is used in high-voltage power transmission to reduce losses?",
+  "options": "Series connection,Parallel connection,Delta connection,Wye connection",
+  "correct_answer": "Wye connection",
+  "explanation": "A wye (or star) connection is commonly used in high-voltage power transmission systems because it allows for a neutral point and helps in reducing losses.",
+  "subject": "Power Systems",
+  "difficulty": "medium",
+  "topics": ["Electrical Transmission", "High-Voltage Systems"]
+},
+{
+  "id": 28,
+  "text": "In a capacitor, what happens when the dielectric constant of the insulating material is increased?",
+  "options": "The capacitance decreases.,The voltage decreases.,The capacitance increases.,The resistance increases.",
+  "correct_answer": "The capacitance increases.",
+  "explanation": "The capacitance of a capacitor increases when the dielectric constant of the insulating material is increased, as capacitance is directly proportional to the dielectric constant.",
+  "subject": "Electronics",
+  "difficulty": "medium",
+  "topics": ["Capacitors", "Electronics"]
+},
+{
+  "id": 29,
+  "text": "Which of the following is an example of a passive electrical component?",
+  "options": "Transistor,LED,Capacitor,MOSFET",
+  "correct_answer": "Capacitor",
+  "explanation": "A capacitor is a passive component because it does not produce energy but rather stores and releases it within a circuit.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Electrical Components", "Passive Components"]
+},
+{
+  "id": 30,
+  "text": "The primary purpose of a circuit breaker in an electrical system is to:",
+  "options": "Regulate voltage,Control power flow,Interrupt excessive current,Reduce resistance",
+  "correct_answer": "Interrupt excessive current",
+  "explanation": "A circuit breaker is designed to interrupt excessive current flow, protecting the electrical system from damage due to overloads or short circuits.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Circuit Protection", "Electrical Safety"]
+},
+{
+  "id": 31,
+  "text": "Which of the following materials has the highest electrical conductivity?",
+  "options": "Aluminum,Gold,Copper,Silver",
+  "correct_answer": "Silver",
+  "explanation": "Silver has the highest electrical conductivity of all metals, making it ideal for use in high-performance electrical applications.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Materials Science", "Electrical Conductivity"]
+},
+{
+  "id": 32,
+  "text": "What is the primary function of a rectifier in an electrical circuit?",
+  "options": "To convert AC to DC,To step up voltage,To step down voltage,To convert DC to AC",
+  "correct_answer": "To convert AC to DC",
+  "explanation": "A rectifier is used to convert alternating current (AC) into direct current (DC), commonly found in power supplies.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Rectifiers", "AC/DC Conversion"]
+},
+{
+  "id": 33,
+  "text": "What is the SI unit of inductance?",
+  "options": "Farad,Ohm,Henry,Coulomb",
+  "correct_answer": "Henry",
+  "explanation": "The SI unit of inductance is the Henry (H), named after Joseph Henry, a pioneer in electromagnetism.",
+  "subject": "Electromagnetism",
+  "difficulty": "easy",
+  "topics": ["Inductance", "SI Units"]
+},
+{
+  "id": 34,
+  "text": "In a three-phase power system, what is the phase difference between any two phases?",
+  "options": "30 degrees,60 degrees,90 degrees,120 degrees",
+  "correct_answer": "120 degrees",
+  "explanation": "In a balanced three-phase system, the phase difference between any two phases is 120 degrees.",
+  "subject": "Power Systems",
+  "difficulty": "medium",
+  "topics": ["Three-Phase Systems", "AC Power"]
+},
+{
+  "id": 35,
+  "text": "Which of the following is used to protect an electrical circuit from excessive current?",
+  "options": "Capacitor,Resistor,Fuse,Inductor",
+  "correct_answer": "Fuse",
+  "explanation": "A fuse is designed to protect a circuit by breaking the connection when the current exceeds a certain threshold, preventing damage.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Circuit Protection", "Electrical Safety"]
+},
+{
+  "id": 36,
+  "text": "What type of motor is commonly used in household appliances such as fans and refrigerators?",
+  "options": "DC motor,Synchronous motor,Induction motor,Stepper motor",
+  "correct_answer": "Induction motor",
+  "explanation": "Induction motors are commonly used in household appliances because of their simplicity, reliability, and low maintenance requirements.",
+  "subject": "Electrical Machines",
+  "difficulty": "easy",
+  "topics": ["Motors", "Household Appliances"]
+},
+{
+  "id": 37,
+  "text": "Which law states that the current flowing through a conductor is directly proportional to the voltage across it and inversely proportional to the resistance?",
+  "options": "Kirchhoff's Voltage Law,Faraday's Law,Ohm's Law,Lenz's Law",
+  "correct_answer": "Ohm's Law",
+  "explanation": "Ohm's Law states that the current flowing through a conductor is proportional to the voltage across it and inversely proportional to its resistance.",
+  "subject": "Basic Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Ohm's Law", "Circuit Theory"]
+},
+{
+  "id": 38,
+  "text": "In a series RLC circuit, at what frequency does resonance occur?",
+  "options": "When capacitive reactance equals inductive reactance,When capacitive reactance is zero,When inductive reactance is maximum,When resistance is zero",
+  "correct_answer": "When capacitive reactance equals inductive reactance",
+  "explanation": "Resonance in a series RLC circuit occurs when the capacitive reactance equals the inductive reactance, resulting in maximum current flow at the resonant frequency.",
+  "subject": "Circuit Theory",
+  "difficulty": "medium",
+  "topics": ["RLC Circuits", "Resonance"]
+},
+{
+  "id": 39,
+  "text": "Which component is responsible for storing energy in the form of an electric field?",
+  "options": "Resistor,Capacitor,Inductor,Diode",
+  "correct_answer": "Capacitor",
+  "explanation": "A capacitor stores energy in the form of an electric field, which is released when the circuit requires it.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Capacitors", "Energy Storage"]
+},
+{
+  "id": 40,
+  "text": "In a parallel circuit, the total resistance is:",
+  "options": "Equal to the sum of individual resistances,Greater than the smallest individual resistance,Smaller than the smallest individual resistance,Equal to the largest individual resistance",
+  "correct_answer": "Smaller than the smallest individual resistance",
+  "explanation": "In a parallel circuit, the total resistance is always smaller than the smallest individual resistance due to the division of current among the branches.",
+  "subject": "Electrical Circuits",
+  "difficulty": "medium",
+  "topics": ["Parallel Circuits", "Resistance"]
+},
+{
+  "id": 41,
+  "text": "What is the purpose of a transformer in an electrical power system?",
+  "options": "To convert AC to DC,To step up or step down voltage,To increase current,To provide electrical isolation",
+  "correct_answer": "To step up or step down voltage",
+  "explanation": "A transformer is used in electrical power systems to step up or step down voltage levels, enabling efficient transmission and distribution of electricity.",
+  "subject": "Power Systems",
+  "difficulty": "medium",
+  "topics": ["Transformers", "Voltage Regulation"]
+},
+{
+  "id": 42,
+  "text": "Which of the following devices measures electric current?",
+  "options": "Voltmeter,Ohmmeter,Ammeter,Capacitance meter",
+  "correct_answer": "Ammeter",
+  "explanation": "An ammeter is used to measure electric current in a circuit. It is connected in series to ensure it accurately measures the current flow.",
+  "subject": "Electrical Engineering",
+  "difficulty": "easy",
+  "topics": ["Measurement Devices", "Current Measurement"]
+},
+{
+  "id": 43,
+  "text": "What is the primary factor that determines the capacitance of a capacitor?",
+  "options": "The length of the wires,The type of insulation,The distance between plates and area of plates,The material of the inductor",
+  "correct_answer": "The distance between plates and area of plates",
+  "explanation": "The capacitance of a capacitor depends on the surface area of the plates, the distance between them, and the dielectric material used.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Capacitors", "Capacitance Calculation"]
+},
+{
+  "id": 44,
+  "text": "What happens to the current in a purely inductive circuit when the frequency of the supply voltage increases?",
+  "options": "The current increases,The current decreases,The current stays the same,The current becomes zero",
+  "correct_answer": "The current decreases",
+  "explanation": "In a purely inductive circuit, the inductive reactance increases with the frequency, causing the current to decrease as frequency rises.",
+  "subject": "AC Circuits",
+  "difficulty": "medium",
+  "topics": ["Inductance", "AC Theory"]
+},
+{
+  "id": 45,
+  "text": "What is the efficiency of a machine that produces 200 W of output power for an input of 250 W?",
+  "options": "70%,75%,80%,85%",
+  "correct_answer": "80%",
+  "explanation": "Efficiency is calculated as (Output Power / Input Power) × 100. Here, the efficiency is (200 W / 250 W) × 100 = 80%.",
+  "subject": "Electrical Machines",
+  "difficulty": "easy",
+  "topics": ["Efficiency", "Power"]
+},
+{
+  "id": 46,
+  "text": "In a DC motor, what is the function of the commutator?",
+  "options": "To generate current,To supply voltage,To reverse the direction of current,To increase the speed of the motor",
+  "correct_answer": "To reverse the direction of current",
+  "explanation": "The commutator in a DC motor reverses the direction of current flow in the windings, ensuring that the motor continues rotating in the same direction.",
+  "subject": "Electrical Machines",
+  "difficulty": "medium",
+  "topics": ["DC Motors", "Commutators"]
+},
+{
+  "id": 47,
+  "text": "Which of the following components is primarily used to control the flow of current in one direction?",
+  "options": "Resistor,Inductor,Capacitor,Diode",
+  "correct_answer": "Diode",
+  "explanation": "A diode allows current to flow in only one direction, making it essential for rectification and protection circuits.",
+  "subject": "Electronics",
+  "difficulty": "easy",
+  "topics": ["Diodes", "Current Flow"]
+},
+{
+  "id": 48,
+  "text": "In a star (Y) connection of a three-phase system, how is the line voltage related to the phase voltage?",
+  "options": "Line voltage is equal to phase voltage,Line voltage is 1.73 times phase voltage,Line voltage is half of phase voltage,Line voltage is 2 times phase voltage",
+  "correct_answer": "Line voltage is 1.73 times phase voltage",
+  "explanation": "In a star (Y) connection, the line voltage is √3 (approximately 1.73) times the phase voltage.",
+  "subject": "Power Systems",
+  "difficulty": "medium",
+  "topics": ["Three-Phase Systems", "Star Connection"]
+},
+{
+  "id": 49,
+  "text": "Which of the following materials is considered a good electrical insulator?",
+  "options": "Copper,Aluminum,Plastic,Silver",
+  "correct_answer": "Plastic",
+  "explanation": "Plastic is a good insulator as it does not allow electric current to flow freely, making it ideal for insulating electrical wires.",
+  "subject": "Materials Science",
+  "difficulty": "easy",
+  "topics": ["Insulators", "Electrical Conductivity"]
+},
+{
+  "id": 50,
+  "text": "What is the term used to describe the opposition to current flow in an AC circuit due to capacitance or inductance?",
+  "options": "Resistance,Reactance,Impedance,Conductance",
+  "correct_answer": "Reactance",
+  "explanation": "Reactance is the opposition to current flow in an AC circuit due to capacitance or inductance, differing from resistance which affects both AC and DC circuits.",
+  "subject": "AC Circuits",
+  "difficulty": "medium",
+  "topics": ["Reactance", "AC Circuit Theory"]
 }
 ]

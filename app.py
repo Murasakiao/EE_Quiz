@@ -337,7 +337,7 @@ def quiz_setup():
         session['subject'] = request.form.get('subject')
         session['topics'] = request.form.getlist('topics')
         session['difficulty'] = request.form.get('difficulty')
-        print(f"Debug - Quiz setup: difficulty={session['difficulty']}")  # Add this line
+        # print(f"Debug - Quiz setup: difficulty={session['difficulty']}")  # Add this line
         session['score'] = 0
         session['questions_asked'] = 0
         return redirect(url_for('quiz'))
@@ -353,7 +353,7 @@ def quiz_setup():
 @app.route('/quiz', methods=['GET', 'POST'])
 @login_required
 def quiz():
-    app.logger.debug(f"Session at start of quiz route: {session}")
+    #app.logger.debug(f"Session at start of quiz route: {session}")
     
     if request.method == 'POST':
         answer = request.form.get('answer')
@@ -363,14 +363,14 @@ def quiz():
             session['score'] = session.get('score', 0) + 1
         session['questions_asked'] = session.get('questions_asked', 0) + 1
         
-        app.logger.debug(f"Questions asked: {session['questions_asked']}")
+        # app.logger.debug(f"Questions asked: {session['questions_asked']}")
         
         if session['questions_asked'] >= 10:
             return redirect(url_for('result'))
     
-    app.logger.debug(f"Subject: {session.get('subject')}")
-    app.logger.debug(f"Topics: {session.get('topics')}")
-    app.logger.debug(f"Difficulty: {session.get('difficulty')}")
+    # app.logger.debug(f"Subject: {session.get('subject')}")
+    # app.logger.debug(f"Topics: {session.get('topics')}")
+    # app.logger.debug(f"Difficulty: {session.get('difficulty')}")
 
     # Query questions that match the subject, difficulty, and any of the selected topics
     questions = Question.query.filter(
@@ -379,24 +379,24 @@ def quiz():
         Question.topics.any(Topic.name.in_(session.get('topics', [])))
     ).all()
     
-    app.logger.debug(f"Retrieved questions: {questions}")
+    #app.logger.debug(f"Retrieved questions: {questions}")
     
     if not questions:
-        app.logger.warning(f"No questions found for subject={session.get('subject')}, topics={session.get('topics')}, difficulty={session.get('difficulty')}")
+        #app.logger.warning(f"No questions found for subject={session.get('subject')}, topics={session.get('topics')}, difficulty={session.get('difficulty')}")
         return redirect(url_for('result'))
     
     question = random.choice(questions)
-    app.logger.debug(f"Selected question: {question.text}")
+    #app.logger.debug(f"Selected question: {question.text}")
     
     options = question.options.split(',')
-    app.logger.debug(f"Options before shuffle: {options}")
+    #app.logger.debug(f"Options before shuffle: {options}")
     
     random.shuffle(options)
-    app.logger.debug(f"Options after shuffle: {options}")
+    #app.logger.debug(f"Options after shuffle: {options}")
 
-    app.logger.debug(f"Question: {question.text if question else 'No question'}")
-    app.logger.debug(f"Options: {options}")
-    app.logger.debug(f"Correct answer: {question.correct_answer if question else 'No correct answer'}")
+    # app.logger.debug(f"Question: {question.text if question else 'No question'}")
+    # app.logger.debug(f"Options: {options}")
+    # app.logger.debug(f"Correct answer: {question.correct_answer if question else 'No correct answer'}")
 
     return render_template('quiz.html', question=question, options=options)
 
@@ -409,7 +409,7 @@ def result():
     topics = session.get('topics', [])
     difficulty = session.get('difficulty')
     
-    print(f"Debug - Result route: score={score}, difficulty={difficulty}")  # Add this line
+    #print(f"Debug - Result route: score={score}, difficulty={difficulty}")  # Add this line
     
     save_quiz_attempt(current_user.id, subject, topics, difficulty, score, total_questions, None)
     update_user_stats(current_user.id, score, difficulty)
