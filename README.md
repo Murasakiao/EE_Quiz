@@ -7,7 +7,7 @@ A comprehensive web application designed to help electrical engineering students
 ![Flask](https://img.shields.io/badge/flask-2.0+-blue.svg)
 ![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-1.4+-blue.svg)
 
-## 🎬 Feature Screenshot
+## 🎬 Feature Screenshots
 
 ![Feature Screenshot](./data/screenshot_page_1.png)
 ![Feature Screenshot](./data/screenshot_page_4.png)
