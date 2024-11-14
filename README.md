@@ -27,7 +27,7 @@ A comprehensive web application designed to help electrical engineering students
 
 ### Quiz System
 - **Customizable Quiz Setup**
-  - Subject selection (Engineering Mathematics, Engineering Science, Electrical Engineering)
+  - Subject selection (Engineering Mathematics, Engineering Sciences and Allied Subjects, Electrical Engineering)
   - Topic filtering within each subject
   - Three difficulty levels (Easy, Medium, Hard)
   - Randomized question selection
